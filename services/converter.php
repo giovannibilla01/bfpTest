@@ -1,10 +1,10 @@
 <?php
-    namespace bfpTest;
+    namespace ResultConverter;
 
     class Converter{
-        public $questionsToReverse;
+        public static array $questionsToReverse = null;
 
-        function __construct($questionsToReverse)
+        private function __construct($questionsToReverse)
         {
             $this->questionsToReverse = $questionsToReverse;
         }
