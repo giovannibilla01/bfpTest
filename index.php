@@ -13,6 +13,7 @@
     <div class="container">
         <h1>Bateria Fatorial de Personalidade</h1>
         <form action="#" method="post">
+          <input type="hidden" name="answers[]" value="0"> <!-- reference value to occupy first position array -->
           <input id="1" name="answers[]" type="text" maxlength="1" size="1" required>
           <label for="1">1 - Procuro seguir as regras sociais sem questioná-las</label><br>
           <input id="2" name="answers[]" type="text" maxlength="1" size="1" required>
@@ -25,7 +26,7 @@
           <label for="5">5 - Falo tudo o que penso.</label><br>
           <input id="6" name="answers[]" type="text" maxlength="1" size="1" required>
           <label for="6">6 - Gosto de fazer coisas que nunca fiz antes.</label><br>
-          <input id="7" name="answers[]" type="text" maxlength="1" size="1" required>
+          <!-- <input id="7" name="answers[]" type="text" maxlength="1" size="1" required>
           <label for="7">7 - Acredito que as pessoas tem boas intenções.</label><br>
           <input id="8" name="answers[]" type="text" maxlength="1" size="1" required>
           <label for="8">8 - Sou divertido.</label><br>
@@ -264,13 +265,20 @@
           <input id="125" name="answers[]" type="text" maxlength="1" size="1" required>
           <label for="125">125 - Preocupo-me em agradar as pessoas.</label><br>
           <input id="126" name="answers[]" type="text" maxlength="1" size="1" required>
-          <label for="126">126 - Sou disposto a rever meus posicionamentos sobre diferentes assuntos.</label><br>
+          <label for="126">126 - Sou disposto a rever meus posicionamentos sobre diferentes assuntos.</label><br> -->
           <input type="submit" value="Enviar">
         </form>
-        <?php 
-        if(isset($_POST['answers'])){
-          echo'<pre>';var_dump($_POST);echo'</pre>';
-        }
+        <?php
+          include './classes/converter.php';
+          use bfpTest\Converter;
+          
+          if(isset($_POST['answers'])){
+
+            $converter = new Converter([2,5]);
+            echo'<pre>';var_dump($converter);echo'</pre>';
+            echo'<pre>';var_dump($_POST);echo'</pre>';
+            echo'<pre>';var_dump($converter->Convert($_POST['answers']));echo'</pre>';
+          }
         ?>
     </div>
     <!-- jQuery; Popper.js; Bootstrap JS -->
