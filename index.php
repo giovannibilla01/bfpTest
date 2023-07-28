@@ -269,16 +269,29 @@
           <input type="submit" value="Enviar">
         </form>
         <?php
-          include './classes/converter.php';
-          use ResultConverter\Converter;
-          
-          if(isset($_POST['answers'])){
-            $questionsToInverter = [1,10,16,17,18,19,23,24,27,30,33,38,39,42,56,57,62,63,66,81,84,87,98,107,115,119];//questions whose result needs to be inverted
-            $converter = new Converter([2,5]);
-            echo'<pre>';var_dump($converter);echo'</pre>';
-            echo'<pre>';var_dump($_POST);echo'</pre>';
-            echo'<pre>';var_dump($converter->Convert($_POST['answers']));echo'</pre>';
-          }
+        include './classes/converter.php';
+        use ResultConverter\Converter;
+        /* business rule description area!
+        #questions with reverse result = 1,10,16,17,18,19,23,24,27,30,33,38,39,42,56,57,62,63,66,81,84,87,98,107,115,119
+        #factor = "NEUROTICISMO"
+        #facets:
+        N1 - VULNERABILIDADE
+
+        N2 - INSTABILIDADE EMOCIONAL
+        
+        N3 - PASSIVIDADE
+        
+        N4 - DEPRESSÃO
+        
+        */
+        
+        if(isset($_POST['answers'])){
+          $questionsToInverter = [2,5];//questions whose result needs to be inverted
+          $converter = new Converter($questionsToInverter);
+          echo'<pre>';var_dump($converter);echo'</pre>';
+          echo'<pre>';var_dump($_POST);echo'</pre>';
+          echo'<pre>';var_dump($converter->Convert($_POST['answers']));echo'</pre>';
+        }
         ?>
     </div>
     <!-- jQuery; Popper.js; Bootstrap JS -->

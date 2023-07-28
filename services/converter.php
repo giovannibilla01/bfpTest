@@ -11,7 +11,7 @@
 
         public function Convert($questionArray){
             for ($index = 1; $index < sizeof($questionArray); $index++){
-                if (in_array($index, $this->questionsToReverse)){ //
+                if (in_array($index, $this->questionsToReverse)){
                     switch ($questionArray[$index]) {
                     case 1:
                         $responseArray[$index] = "7";
