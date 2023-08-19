@@ -2,9 +2,9 @@
     namespace ResultConverter;
 
     class Converter{
-        public static array $questionsToReverse = null;
+        public array $questionsToReverse = [];
 
-        private function __construct($questionsToReverse)
+        public function __construct($questionsToReverse)
         {
             $this->questionsToReverse = $questionsToReverse;
         }
