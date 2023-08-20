@@ -14,7 +14,6 @@
         public function __construct($id, $name, $questionArray, $requiredQuestions, $percentileValues, $classificationReference, $definitionReference, $seemReference) {
             $this->id = $id;
             $this->name = $name;
-
             $this->score = $this->Score($questionArray, $requiredQuestions);
             $this->rawScore = $this->Average($this->score, $requiredQuestions);
             $this->percentile = $this->PercentileCalculation($this->rawScore, $percentileValues);
@@ -77,6 +76,18 @@
                     }
                     break;
             }
+        }
+
+        public function GetScore() {
+            return $this->score;
+        }
+
+        public function GetRawScore() {
+            return $this->rawScore;
+        }
+
+        public function GetSeem() {
+            return $this->seem;
         }
     }
 ?>
