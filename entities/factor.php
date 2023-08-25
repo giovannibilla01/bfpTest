@@ -57,5 +57,9 @@
             }
             return $sum >= $seemReference ? "Apto" : "Inapto";
         }
+
+        public function GetSeem() {
+            return $this->seem;
+        }
     }
 ?>
