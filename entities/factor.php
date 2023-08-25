@@ -61,5 +61,25 @@
         public function GetSeem() {
             return $this->seem;
         }
+
+        public function GetFacets() {
+            return $this->facets;
+        }
+
+        public function Table() {
+            echo "
+                <tr>
+                    <th scope='row'>$this->name</th>
+                    <th>$this->score</th>
+                    <th>$this->rawScore</th>
+                    <th>$this->percentile</th>
+                    <th>$this->classification</th>
+                    <th>$this->seem</th>
+                </tr>
+                <tr>
+                    <td colspan='6'>$this->definition</td>
+                </tr>
+            ";
+        }
     }
 ?>

@@ -89,5 +89,21 @@
         public function GetSeem() {
             return $this->seem;
         }
+
+        public function Table() {
+            echo "
+                <tr>
+                    <th>$this->id - $this->name</th>
+                    <td>$this->score</td>
+                    <td>$this->rawScore</td>
+                    <td>$this->percentile</td>
+                    <td>$this->classification</td>
+                    <td>$this->seem</td>
+                </tr>
+                <tr>
+                    <td colspan='6'>$this->definition</td>
+                </tr>
+            ";
+        }
     }
 ?>

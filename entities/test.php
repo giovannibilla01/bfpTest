@@ -26,30 +26,34 @@ use ObjectFactor\Factor;
         $this->seem = $this->SeemAssignment($seemReference);
       }
 
-      public function getDate() {
+      public function GetDate() {
         return $this->start;
       }
 
-      public function getDuration() {
+      public function GetDuration() {
         return $this->termination->diff($this->start);
       }
 
-      public function getAge() {
+      public function GetAge() {
         $dateTimeNow = new DateTime();
         $interval = $dateTimeNow->diff($this->birth);
         return $interval->y;
       }
 
-      public function getName() {
+      public function GetName() {
         return $this->name;
       }
 
-      public function getSex() {
+      public function GetSex() {
         return $this->sex;
       }
 
-      public function getSchooling() {
+      public function GetSchooling() {
          return $this->schooling;
+      }
+
+      public function GetSeem() {
+        return $this->seem;
       }
       
       private function SeemAssignment($seemReference){
