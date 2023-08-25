@@ -3,16 +3,80 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./images/favicon.ico">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Style CSS -->
+    <link rel="stylesheet" href=".\css\style.css">
     <title>Bateria Fatorial de Personalidade</title>
   </head>
   <body>
     <div class="container">
-        <h1>Bateria Fatorial de Personalidade</h1>
-        <form action="#" method="post">
+      <div class="row">
+        <div class="col">
+          <h1>Bateria Fatorial de Personalidade</h1>
+        </div>
+      </div>
+      <?php
+      include './entities/facet.php';
+      include './entities/factor.php';
+      include './entities/test.php';
+      include './services/converter.php';
+      
+      use ObjectFacet\Facet;
+      use ObjectFactor\Factor;
+      use ObjectTest\Test;
+      use ResultConverter\Converter;
+
+      if(!isset($_POST['answers'])){
+      ?>
+      <div class="row">
+        <div class="col">
+          <figure>
+            <img src="./images/image01.png" alt="Orientação para Preenchimento do Questionario">
+            <figcaption>Imagem 01 - Orientação para Preenchimento do Questionario</figcaption>
+          </figure>
+          <form method="post">
+            <input type="hidden" id="start" name="start">
+            <input type="hidden" id="termination" name="termination">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="name">Nome Completo: </label>
+          <input type="text" id="name" name="name" class="form-control" value="pessoa" required>
+        </div>
+        <div class="col">
+          <label for="sex">Sexo: </label>
+          <select name="sex" id="sex" class="form-control" required>
+            <option></option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="birth">Data Nascimento: </label>
+          <input type="date" id="birth" name="birth" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="schooling">Escolaridade: </label>
+          <select name="schooling" id="schooling" class="form-control" required>
+            <option></option>
+            <option>Ensino Fundamental</option>
+            <option>Ensino Médio</option>
+            <option>Ensino Superior Incompleto</option>
+            <option>Ensino Superior Completo</option>
+            <option>Mestrado</option>
+            <option>Doutorado</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
           <input type="hidden" name="answers[]" value="0"> <!-- reference value to occupy first position array -->
           <input id="1" name="answers[]" type="text" maxlength="1" size="1" required value="1">
           <label for="1">1 - Procuro seguir as regras sociais sem questioná-las</label><br>
@@ -140,6 +204,8 @@
           <label for="62">62 - Sou uma pessoa com pouca imaginação.</label><br>
           <input id="63" name="answers[]" type="text" maxlength="1" size="1" required value="7">
           <label for="63">63 - Faço coisas consideradas perigosas.</label><br>
+        </div>
+        <div class="col">
           <input id="64" name="answers[]" type="text" maxlength="1" size="1" required value="7">
           <label for="64">64 - Penso sobre o que preciso fazer para alcançar meus objetivos.</label><br>
           <input id="65" name="answers[]" type="text" maxlength="1" size="1" required value="2">
@@ -265,266 +331,505 @@
           <input id="125" name="answers[]" type="text" maxlength="1" size="1" required value="1">
           <label for="125">125 - Preocupo-me em agradar as pessoas.</label><br>
           <input id="126" name="answers[]" type="text" maxlength="1" size="1" required value="1">
-          <label for="126">126 - Sou disposto a rever meus posicionamentos sobre diferentes assuntos.</label><br>
-          <input type="submit" value="Enviar">
-        </form>
-        <?php
-        include './entities/facet.php';
-        include './entities/factor.php';
-        include './services/converter.php';
-        use ObjectFacet\Facet;
-        use ObjectFactor\Factor;
-        use ResultConverter\Converter;
+          <label for="126">126 - Sou disposto a rever meus posicionamentos sobre diferentes assuntos.</label><br>            
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+            <input type="submit" class="btn btn-primary" value="Enviar" onclick="timeSubmit()">
+          </form>
+        </div>
+      </div>
+      <?php
+      } else {
+      /* business rule description area! */
+      #questions with reverse result
+      $questionsToInverter = [1,10,16,17,18,19,23,24,27,30,33,38,39,42,56,57,62,63,66,81,84,87,98,107,115,119];
+      #reference values for classifying the percentile result
+      $classificationReference = [
+        1 => [
+          1 => 15,
+          2 => "Muito Baixo"
+        ],
+        2 => [
+          1 => 30,
+          2 => "Baixo"
+        ],
+        3 => [
+          1 => 71,
+          2 => "Médio"
+        ],
+        4 => [
+          1 => 85,
+          2 => "Alto"
+        ],
+        5 => [
+          1 => 101,
+          2 => "Muito Alto"
+        ]
+      ];
+      #seem reference for general test
+      $seemReference['test'] = 3;
+      $factors = [];
+      #factor: NEUROTICISMO
+      $percentileValues['n'] = [
+        5 => 1.66,
+        10 => 1.92,
+        15 => 2.13,
+        20 => 2.30,
+        25 => 2.45,
+        30 => 2.59,
+        35 => 2.73,
+        40 => 2.87,
+        45 => 3.00,
+        50 => 3.12,
+        55 => 3.25,
+        60 => 3.39,
+        65 => 3.54,
+        70 => 3.68,
+        75 => 3.86,
+        80 => 4.05,
+        85 => 4.25,
+        90 => 4.52,
+        95 => 4.94
+      ];
+      $definitionReference['n'] = [
+        "Muito Baixo" => "texto exemplo muito baixo n factor", 
+        "Baixo" => "texto exemplo baixo n factor", 
+        "Médio" => "texto exemplo medio n factor", 
+        "Alto" => "texto exemplo alto n factor", 
+        "Muito Alto" => "texto exemplo muito alto n factor"
+      ];
+      $seemReference['n'] = 2;
+      #facet: N1 - VULNERABILIDADE
+      $facetName['n1'] = "N1";
+      $facetDescription['n1'] = "VULNERABILIDADE"; 
+      $requiredQuestions['n1'] = [ 55, 60, 73, 75, 79, 82, 89, 110, 118 ];
+      $percentileValues['n1'] = [
+        5 => 1.57,
+        10 => 1.86,
+        15 => 2.14,
+        20 => 2.33,
+        25 => 2.57,
+        30 => 2.71,
+        35 => 2.89,
+        40 => 3.11,
+        45 => 3.29,
+        50 => 3.44,
+        55 => 3.57,
+        60 => 3.78,
+        65 => 3.89,
+        70 => 4.11,
+        75 => 4.33,
+        80 => 4.56,
+        85 => 4.86,
+        90 => 5.14,
+        95 => 5.67
+      ];
+      $definitionReference['n1'] = [
+        "Muito Baixo" => "texto exemplo muito baixo n1 ", 
+        "Baixo" => "texto exemplo baixo n1 ", 
+        "Médio" => "texto exemplo medio n1 ", 
+        "Alto" => "texto exemplo alto n1 ", 
+        "Muito Alto" => "texto exemplo muito alto n1 "
+      ];
+      $seemReference['n1'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 15,
+          2 => 50
+        ]
+      ];
+      
+      #facet: N2 - INSTABILIDADE EMOCIONAL
+      $facetName['n2'] = "N2";
+      $facetDescription['n2'] = "INSTABILIDADE EMOCIONAL"; 
+      $requiredQuestions['n2'] = [ 25, 51, 65, 77, 86, 102 ];
+      $percentileValues['n2'] = [
+        5 => 1.50,
+        10 => 1.83,
+        15 => 2.17,
+        20 => 2.33,
+        25 => 2.50,
+        30 => 2.83,
+        35 => 3.00,
+        40 => 3.25,
+        45 => 3.33,
+        50 => 3.50,
+        55 => 3.83,
+        60 => 4.00,
+        65 => 4.25,
+        70 => 4.50,
+        75 => 4.67,
+        80 => 5.00,
+        85 => 5.25,
+        90 => 5.67,
+        95 => 6.17
+      ];
+      $definitionReference['n2'] = [
+        "Muito Baixo" => "texto exemplo muito baixo n2 ", 
+        "Baixo" => "texto exemplo baixo n2 ", 
+        "Médio" => "texto exemplo medio n2 ", 
+        "Alto" => "texto exemplo alto n2 ", 
+        "Muito Alto" => "texto exemplo muito alto n2 "
+      ];
+      $seemReference['n2'] = [
+        "operation" => "less",
+        "value" => [
+          1 => 50
+        ]
+      ];
 
-        if(isset($_POST['answers'])){
-          /* business rule description area! */
-          #questions with reverse result
-          $questionsToInverter = [1,10,16,17,18,19,23,24,27,30,33,38,39,42,56,57,62,63,66,81,84,87,98,107,115,119];
-          #reference values for classifying the percentile result
-          $classificationReference = [
-            1 => [
-              1 => 15,
-              2 => "Muito Baixo"
-            ],
-            2 => [
-              1 => 30,
-              2 => "Baixo"
-            ],
-            3 => [
-              1 => 71,
-              2 => "Médio"
-            ],
-            4 => [
-              1 => 85,
-              2 => "Alto"
-            ],
-            5 => [
-              1 => 101,
-              2 => "Muito Alto"
-            ]
-          ];
-          $factors = [];
-          #factor: NEUROTICISMO
-          $percentileValues['n'] = [
-            5 => 1.66,
-            10 => 1.92,
-            15 => 2.13,
-            20 => 2.30,
-            25 => 2.45,
-            30 => 2.59,
-            35 => 2.73,
-            40 => 2.87,
-            45 => 3.00,
-            50 => 3.12,
-            55 => 3.25,
-            60 => 3.39,
-            65 => 3.54,
-            70 => 3.68,
-            75 => 3.86,
-            80 => 4.05,
-            85 => 4.25,
-            90 => 4.52,
-            95 => 4.94
-          ];
-          $definitionReference['n'] = [
-            "Muito Baixo" => "texto exemplo muito baixo n factor", 
-            "Baixo" => "texto exemplo baixo n factor", 
-            "Médio" => "texto exemplo medio n factor", 
-            "Alto" => "texto exemplo alto n factor", 
-            "Muito Alto" => "texto exemplo muito alto n factor"
-          ];
-          $seemReference['n'] = 2;
-          #facet: N1 - VULNERABILIDADE
-          $facetName['n1'] = "N1";
-          $facetDescription['n1'] = "VULNERABILIDADE"; 
-          $requiredQuestions['n1'] = [ 55, 60, 73, 75, 79, 82, 89, 110, 118 ];
-          $percentileValues['n1'] = [
-            5 => 1.57,
-            10 => 1.86,
-            15 => 2.14,
-            20 => 2.33,
-            25 => 2.57,
-            30 => 2.71,
-            35 => 2.89,
-            40 => 3.11,
-            45 => 3.29,
-            50 => 3.44,
-            55 => 3.57,
-            60 => 3.78,
-            65 => 3.89,
-            70 => 4.11,
-            75 => 4.33,
-            80 => 4.56,
-            85 => 4.86,
-            90 => 5.14,
-            95 => 5.67
-          ];
-          $definitionReference['n1'] = [
-            "Muito Baixo" => "texto exemplo muito baixo n1 ", 
-            "Baixo" => "texto exemplo baixo n1 ", 
-            "Médio" => "texto exemplo medio n1 ", 
-            "Alto" => "texto exemplo alto n1 ", 
-            "Muito Alto" => "texto exemplo muito alto n1 "
-          ];
-          $seemReference['n1'] = [
-            "operation" => "between",
-            "value" => [
-              1 => 15,
-              2 => 50
-            ]
-          ];
-          
-          #facet: N2 - INSTABILIDADE EMOCIONAL
-          $facetName['n2'] = "N2";
-          $facetDescription['n2'] = "INSTABILIDADE EMOCIONAL"; 
-          $requiredQuestions['n2'] = [ 25, 51, 65, 77, 86, 102 ];
-          $percentileValues['n2'] = [
-            5 => 1.50,
-            10 => 1.83,
-            15 => 2.17,
-            20 => 2.33,
-            25 => 2.50,
-            30 => 2.83,
-            35 => 3.00,
-            40 => 3.25,
-            45 => 3.33,
-            50 => 3.50,
-            55 => 3.83,
-            60 => 4.00,
-            65 => 4.25,
-            70 => 4.50,
-            75 => 4.67,
-            80 => 5.00,
-            85 => 5.25,
-            90 => 5.67,
-            95 => 6.17
-          ];
-          $definitionReference['n2'] = [
-            "Muito Baixo" => "texto exemplo muito baixo n2 ", 
-            "Baixo" => "texto exemplo baixo n2 ", 
-            "Médio" => "texto exemplo medio n2 ", 
-            "Alto" => "texto exemplo alto n2 ", 
-            "Muito Alto" => "texto exemplo muito alto n2 "
-          ];
-          $seemReference['n2'] = [
-            "operation" => "less",
-            "value" => [
-              1 => 50
-            ]
-          ];
+      #facet: N3 - PASSIVIDADE
+      $facetName['n3'] = "N3";
+      $facetDescription['n3'] = "PASSIVIDADE"; 
+      $requiredQuestions['n3'] = [ 13, 22, 35, 37, 95, 100 ];
+      $percentileValues['n3'] = [
+        5 => 1.50,
+        10 => 1.83,
+        15 => 2.17,
+        20 => 2.33,
+        25 => 2.50,
+        30 => 2.67,
+        35 => 2.83,
+        40 => 3.00,
+        45 => 3.20,
+        50 => 3.40,
+        55 => 3.60,
+        60 => 3.80,
+        65 => 4.00,
+        70 => 4.17,
+        75 => 4.33,
+        80 => 4.60,
+        85 => 4.83,
+        90 => 5.00,
+        95 => 5.50
+      ];
+      $definitionReference['n3'] = [
+        "Muito Baixo" => "texto exemplo muito baixo n3 ", 
+        "Baixo" => "texto exemplo baixo n3 ", 
+        "Médio" => "texto exemplo medio n3 ", 
+        "Alto" => "texto exemplo alto n3 ", 
+        "Muito Alto" => "texto exemplo muito alto n3 "
+      ];
+      $seemReference['n3'] = [
+        "operation" => "less",
+        "value" => [
+          1 => 50
+        ]
+      ];
 
-          #facet: N3 - PASSIVIDADE
-          $facetName['n3'] = "N3";
-          $facetDescription['n3'] = "PASSIVIDADE"; 
-          $requiredQuestions['n3'] = [ 13, 22, 35, 37, 95, 100 ];
-          $percentileValues['n3'] = [
-            5 => 1.50,
-            10 => 1.83,
-            15 => 2.17,
-            20 => 2.33,
-            25 => 2.50,
-            30 => 2.67,
-            35 => 2.83,
-            40 => 3.00,
-            45 => 3.20,
-            50 => 3.40,
-            55 => 3.60,
-            60 => 3.80,
-            65 => 4.00,
-            70 => 4.17,
-            75 => 4.33,
-            80 => 4.60,
-            85 => 4.83,
-            90 => 5.00,
-            95 => 5.50
-          ];
-          $definitionReference['n3'] = [
-            "Muito Baixo" => "texto exemplo muito baixo n3 ", 
-            "Baixo" => "texto exemplo baixo n3 ", 
-            "Médio" => "texto exemplo medio n3 ", 
-            "Alto" => "texto exemplo alto n3 ", 
-            "Muito Alto" => "texto exemplo muito alto n3 "
-          ];
-          $seemReference['n3'] = [
-            "operation" => "less",
-            "value" => [
-              1 => 50
-            ]
-          ];
+      #facet: N4 - DEPRESSÃO
+      $facetName['n4'] = "N4";
+      $facetDescription['n4'] = "DEPRESSÃO"; 
+      $requiredQuestions['n4'] = [ 16, 29, 40, 48, 70, 106, 121, 124 ];
+      $percentileValues['n4'] = [
+        5 => 1.00,
+        10 => 1.14,
+        15 => 1.25,
+        20 => 1.38,
+        25 => 1.50,
+        30 => 1.63,
+        35 => 1.75,
+        40 => 1.83,
+        45 => 2.00,
+        50 => 2.00,
+        55 => 2.14,
+        60 => 2.29,
+        65 => 2.50,
+        70 => 2.63,
+        75 => 2.88,
+        80 => 3.17,
+        85 => 3.50,
+        90 => 3.88,
+        95 => 4.63
+      ];
+      $definitionReference['n4'] = [
+        "Muito Baixo" => "texto exemplo muito baixo n4 ", 
+        "Baixo" => "texto exemplo baixo n4 ", 
+        "Médio" => "texto exemplo medio n4 ", 
+        "Alto" => "texto exemplo alto n4 ", 
+        "Muito Alto" => "texto exemplo muito alto n4 "
+      ];
+      $seemReference['n4'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 15,
+          2 => 50
+        ]
+      ];
 
-          #facet: N4 - DEPRESSÃO
-          $facetName['n4'] = "N4";
-          $facetDescription['n4'] = "DEPRESSÃO"; 
-          $requiredQuestions['n4'] = [ 16, 29, 40, 48, 70, 106, 121, 124 ];
-          $percentileValues['n4'] = [
-            5 => 1.00,
-            10 => 1.14,
-            15 => 1.25,
-            20 => 1.38,
-            25 => 1.50,
-            30 => 1.63,
-            35 => 1.75,
-            40 => 1.83,
-            45 => 2.00,
-            50 => 2.00,
-            55 => 2.14,
-            60 => 2.29,
-            65 => 2.50,
-            70 => 2.63,
-            75 => 2.88,
-            80 => 3.17,
-            85 => 3.50,
-            90 => 3.88,
-            95 => 4.63
-          ];
-          $definitionReference['n4'] = [
-            "Muito Baixo" => "texto exemplo muito baixo n4 ", 
-            "Baixo" => "texto exemplo baixo n4 ", 
-            "Médio" => "texto exemplo medio n4 ", 
-            "Alto" => "texto exemplo alto n4 ", 
-            "Muito Alto" => "texto exemplo muito alto n4 "
-          ];
-          $seemReference['n4'] = [
-            "operation" => "between",
-            "value" => [
-              1 => 15,
-              2 => 50
-            ]
-          ];
-          /*
-          #reference value for seem
-          = [
-            "operation" => "greater",
-            "value" => [
-              1 => 50
-            ]
-          ]
-          */
-          $converter = new Converter($questionsToInverter);
-          $questionsArray = $converter->Convert($_POST['answers']);
-          #object instantiation
-          $factors['n'] = new Factor(
-            "NEUROTICISMO",
-            [
-              new Facet($facetName['n1'], $facetDescription['n1'], $questionsArray, $requiredQuestions['n1'], $percentileValues['n1'], $classificationReference, $definitionReference['n1'], $seemReference['n1']),
-              new Facet($facetName['n2'], $facetDescription['n2'], $questionsArray, $requiredQuestions['n2'], $percentileValues['n2'], $classificationReference, $definitionReference['n2'], $seemReference['n2']),
-              new Facet($facetName['n3'], $facetDescription['n3'], $questionsArray, $requiredQuestions['n3'], $percentileValues['n3'], $classificationReference, $definitionReference['n3'], $seemReference['n3']),
-              new Facet($facetName['n4'], $facetDescription['n4'], $questionsArray, $requiredQuestions['n4'], $percentileValues['n4'], $classificationReference, $definitionReference['n4'], $seemReference['n4'])
-            ],
-            $percentileValues['n'],
-            $classificationReference,
-            $definitionReference['n'],
-            $seemReference['n']
-          );
-          
-          echo"<hr>";
-          echo'<pre>';var_dump($factors);echo'</pre>';
-        }
+      #factor: EXTROVERSÃO
+      $percentileValues['e'] = [
+        5 => 2.87,
+        10 => 3.19,
+        15 => 3.44,
+        20 => 3.62,
+        25 => 3.77,
+        30 => 3.89,
+        35 => 4.02,
+        40 => 4.15,
+        45 => 4.25,
+        50 => 4.38,
+        55 => 4.48,
+        60 => 4.58,
+        65 => 4.68,
+        70 => 4.80,
+        75 => 4.93,
+        80 => 5.07,
+        85 => 5.24,
+        90 => 5.44,
+        95 => 5.72
+      ];
+      $definitionReference['e'] = [
+        "Muito Baixo" => "texto exemplo muito baixo e factor", 
+        "Baixo" => "texto exemplo baixo e factor", 
+        "Médio" => "texto exemplo medio e factor", 
+        "Alto" => "texto exemplo alto e factor", 
+        "Muito Alto" => "texto exemplo muito alto e factor"
+      ];
+      $seemReference['e'] = 2;
+      #facet: E1 - COMUNICAÇÃO
+      $facetName['e1'] = "E1";
+      $facetDescription['e1'] = "COMUNICAÇÃO"; 
+      $requiredQuestions['e1'] = [ 17, 38, 66, 97, 105, 120 ];
+      $percentileValues['e1'] = [
+        5 => 2.00,
+        10 => 2.50,
+        15 => 3.00,
+        20 => 3.17,
+        25 => 3.50,
+        30 => 3.67,
+        35 => 3.83,
+        40 => 4.00,
+        45 => 4.17,
+        50 => 4.33,
+        55 => 4.50,
+        60 => 4.67,
+        65 => 4.83,
+        70 => 5.00,
+        75 => 5.17,
+        80 => 5.33,
+        85 => 5.67,
+        90 => 6.00,
+        95 => 6.33
+      ];
+      $definitionReference['e1'] = [
+        "Muito Baixo" => "texto exemplo muito baixo e1 ", 
+        "Baixo" => "texto exemplo baixo e1 ", 
+        "Médio" => "texto exemplo medio e1 ", 
+        "Alto" => "texto exemplo alto e1 ", 
+        "Muito Alto" => "texto exemplo muito alto e1 "
+      ];
+      $seemReference['e1'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 30
+        ]
+      ];
+      
+      #facet: E2 - ALTIVEZ
+      $facetName['e2'] = "E2";
+      $facetDescription['e2'] = "ALTIVEZ"; 
+      $requiredQuestions['e2'] = [ 3, 5, 14, 78, 93, 99, 111 ];
+      $percentileValues['e2'] = [
+        5 => 2.00,
+        10 => 2.29,
+        15 => 2.57,
+        20 => 2.71,
+        25 => 2.86,
+        30 => 3.09,
+        35 => 3.17,
+        40 => 3.33,
+        45 => 3.43,
+        50 => 3.57,
+        55 => 3.71,
+        60 => 3.86,
+        65 => 4.00,
+        70 => 4.14,
+        75 => 4.43,
+        80 => 4.57,
+        85 => 4.83,
+        90 => 5.14,
+        95 => 5.57
+      ];
+      $definitionReference['e2'] = [
+        "Muito Baixo" => "texto exemplo muito baixo e2 ", 
+        "Baixo" => "texto exemplo baixo e2 ", 
+        "Médio" => "texto exemplo medio e2 ", 
+        "Alto" => "texto exemplo alto e2 ", 
+        "Muito Alto" => "texto exemplo muito alto e2 "
+      ];
+      $seemReference['e2'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 30,
+          2 => 85
+        ]
+      ];
+
+      #facet: E3 - DINAMISMO
+      $facetName['e3'] = "E3";
+      $facetDescription['e3'] = "DINAMISMO"; 
+      $requiredQuestions['e3'] = [ 21, 26, 32, 108, 117 ];
+      $percentileValues['e3'] = [
+        5 => 3.00,
+        10 => 3.40,
+        15 => 3.80,
+        20 => 4.00,
+        25 => 4.20,
+        30 => 4.20,
+        35 => 4.40,
+        40 => 4.60,
+        45 => 4.60,
+        50 => 4.80,
+        55 => 5.00,
+        60 => 5.00,
+        65 => 5.20,
+        70 => 5.40,
+        75 => 5.60,
+        80 => 5.80,
+        85 => 5.80,
+        90 => 6.20,
+        95 => 6.40
+      ];
+      $definitionReference['e3'] = [
+        "Muito Baixo" => "texto exemplo muito baixo e3 ", 
+        "Baixo" => "texto exemplo baixo e3 ", 
+        "Médio" => "texto exemplo medio e3 ", 
+        "Alto" => "texto exemplo alto e3 ", 
+        "Muito Alto" => "texto exemplo muito alto e3 "
+      ];
+      $seemReference['e3'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 30
+        ]
+      ];
+
+      #facet: E4 - INTERAÇÕES SOCIAIS
+      $facetName['e4'] = "E4";
+      $facetDescription['e4'] = "INTERAÇÕES SOCIAIS"; 
+      $requiredQuestions['e4'] = [ 8, 11, 47, 50, 52, 71, 90 ];
+      $percentileValues['e4'] = [
+        5 => 2.83,
+        10 => 3.33,
+        15 => 3.67,
+        20 => 3.86,
+        25 => 4.14,
+        30 => 4.29,
+        35 => 4.43,
+        40 => 4.57,
+        45 => 4.71,
+        50 => 4.86,
+        55 => 5.00,
+        60 => 5.17,
+        65 => 5.33,
+        70 => 5.50,
+        75 => 5.67,
+        80 => 5.83,
+        85 => 6.00,
+        90 => 6.29,
+        95 => 6.57
+      ];
+      $definitionReference['e4'] = [
+        "Muito Baixo" => "texto exemplo muito baixo e4 ", 
+        "Baixo" => "texto exemplo baixo e4 ", 
+        "Médio" => "texto exemplo medio e4 ", 
+        "Alto" => "texto exemplo alto e4 ", 
+        "Muito Alto" => "texto exemplo muito alto e4 "
+      ];
+      $seemReference['e4'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 30
+        ]
+      ];
+
+      $converter = new Converter($questionsToInverter);
+      $questionsArray = $converter->Convert($_POST['answers']);
+      #object instantiation
+      $factors['n'] = new Factor(
+        "NEUROTICISMO",
+        [
+          new Facet($facetName['n1'], $facetDescription['n1'], $questionsArray, $requiredQuestions['n1'], $percentileValues['n1'], $classificationReference, $definitionReference['n1'], $seemReference['n1']),
+          new Facet($facetName['n2'], $facetDescription['n2'], $questionsArray, $requiredQuestions['n2'], $percentileValues['n2'], $classificationReference, $definitionReference['n2'], $seemReference['n2']),
+          new Facet($facetName['n3'], $facetDescription['n3'], $questionsArray, $requiredQuestions['n3'], $percentileValues['n3'], $classificationReference, $definitionReference['n3'], $seemReference['n3']),
+          new Facet($facetName['n4'], $facetDescription['n4'], $questionsArray, $requiredQuestions['n4'], $percentileValues['n4'], $classificationReference, $definitionReference['n4'], $seemReference['n4'])
+        ],
+        $percentileValues['n'],
+        $classificationReference,
+        $definitionReference['n'],
+        $seemReference['n']
+      );
+      $factors['e'] = new Factor(
+        "EXTROVERSÃO",
+        [
+          new Facet($facetName['e1'], $facetDescription['e1'], $questionsArray, $requiredQuestions['e1'], $percentileValues['e1'], $classificationReference, $definitionReference['e1'], $seemReference['e1']),
+          new Facet($facetName['e2'], $facetDescription['e2'], $questionsArray, $requiredQuestions['e2'], $percentileValues['e2'], $classificationReference, $definitionReference['e2'], $seemReference['e2']),
+          new Facet($facetName['e3'], $facetDescription['e3'], $questionsArray, $requiredQuestions['e3'], $percentileValues['e3'], $classificationReference, $definitionReference['e3'], $seemReference['e3']),
+          new Facet($facetName['e4'], $facetDescription['e4'], $questionsArray, $requiredQuestions['e4'], $percentileValues['e4'], $classificationReference, $definitionReference['e4'], $seemReference['e4'])
+        ],
+        $percentileValues['e'],
+        $classificationReference,
+        $definitionReference['e'],
+        $seemReference['e']
+      );
+      $test = new Test($factors, $_POST['start'], $_POST['termination'], $_POST['name'], $_POST['sex'], $_POST['birth'], $_POST['schooling'], $seemReference['test']);
+      ?>
+      <div class="row">
+        <div class="col text-left">
+          Data Realização: <?php echo $test->getDate()->format('d/m/Y'); ?>
+        </div>
+        <div class="col text-right">
+          Tempo: 
+          <?php
+          $interval = $test->getDuration(); 
+          if ($interval->h != 0) {
+            echo $interval->h . " Horas " . $interval->i . " Minutos " . $interval->s . " Segundos";
+          } else {
+            echo $interval->i . " Minutos " . $interval->s . " Segundos";
+          }
         ?>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Nome: <?php echo $test->getName(); ?>
+        </div>
+        <div class="col">
+          Sexo: <?php echo $test->getsex(); ?>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Idade: <?php echo $test->getAge() . " Anos"; ?>
+        </div>
+        <div class="col">
+          Escolaridade: <?php echo $test->getSchooling(); ?>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <?php
+          echo'<pre>';var_dump($test);echo'</pre>';
+          ?>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button type="button" class="btn btn-primary" onClick="reloadPage()">Voltar</button>
+        </div>
+      </div>
+      <?php
+      }
+      ?>
     </div>
     <!-- jQuery; Popper.js; Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
