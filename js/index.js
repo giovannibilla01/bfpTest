@@ -14,3 +14,20 @@ function timeSubmit() {
 function reloadPage() {
     window.location.href = "/BFPtest/";
 }
+
+const inputAnswers = document.querySelectorAll('.inputAnswers');
+
+inputAnswers.forEach((input, index) => {
+    input.addEventListener('input', function(event) {
+        const inputValue = event.target.value;
+        const validNumbers = ['1', '2', '3', '4', '5', '6', '7'];
+
+        if (!validNumbers.includes(inputValue)) {
+            event.target.value = '';
+        } else {
+            if (index < inputAnswers.length - 1) {
+                inputAnswers[index + 1].focus();
+            }
+        }
+    });
+});
