@@ -17,7 +17,7 @@
             $this->name = $name;
             $this->facets = $facets;
             $this->score = $this->Score();
-            $this->rawScore = $this->score/count($this->facets);
+            $this->rawScore = round($this->score/count($this->facets), 2);
             $this->percentile = $this->PercentileCalculation($this->rawScore, $percentileValues);
             $this->classification = $this->RankAssignment($this->percentile, $classificationReference);
             $this->definition = $definitionReference[$this->classification];

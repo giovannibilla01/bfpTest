@@ -15,7 +15,7 @@
             $this->id = $id;
             $this->name = $name;
             $this->score = $this->Score($questionArray, $requiredQuestions);
-            $this->rawScore = $this->Average($this->score, $requiredQuestions);
+            $this->rawScore = round($this->Average($this->score, $requiredQuestions), 2);
             $this->percentile = $this->PercentileCalculation($this->rawScore, $percentileValues);
             $this->classification = $this->RankAssignment($this->percentile, $classificationReference);
             $this->definition = $definitionReference[$this->classification];
@@ -24,16 +24,16 @@
 
         private function Score($questionArray, $requiredQuestions){
             $score = 0;
-            for ($index = 1; $index < sizeof($questionArray); $index++){
+            for ($index = 0; $index <= count($questionArray); $index++){
                 if (in_array($index, $requiredQuestions)){
-                    $score =+ $questionArray[$index];
+                    $score += $questionArray[$index];
                 }
             }
             return $score;
         }
 
         private function Average($score, $requiredQuestions){
-            return $score / sizeof($requiredQuestions);
+            return $score / count($requiredQuestions);
         }
 
         private function PercentileCalculation($rawScore, $percentileValues){

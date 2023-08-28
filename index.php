@@ -78,259 +78,259 @@
       <div class="row">
         <div class="col">
           <input type="hidden" name="answers[]" value="0"> <!-- reference value to occupy first position array -->
-          <input id="1" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="1" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="1">1 - Procuro seguir as regras sociais sem questioná-las</label><br>
-          <input id="2" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="2" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="2">2 - Tento fazer com que as pessoas se sintam bem.</label><br>
-          <input id="3" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="3" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="3">3 - Gosto de falar sobre mim.</label><br>
-          <input id="4" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="4" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="4">4 - Tenho um coração mole.</label><br>
-          <input id="5" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="5" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="5">5 - Falo tudo o que penso.</label><br>
-          <input id="6" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="6" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="6">6 - Gosto de fazer coisas que nunca fiz antes.</label><br>
-          <input id="7" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="7" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="7">7 - Acredito que as pessoas tem boas intenções.</label><br>
-          <input id="8" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="8" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="8">8 - Sou divertido.</label><br>
-          <input id="9" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="9" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="9">9 - Tomo cuidado com o que falo.</label><br>
-          <input id="10" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="10" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="10">10 - Dificilmente perdoo.</label><br>
-          <input id="11" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="11" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="11">11 - Divirto-me quando estou entre muitas pessoas.</label><br>
-          <input id="12" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="12" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="12">12 - Respeito os sentimentos alheios.</label><br>
-          <input id="13" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="13" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="13">13 - Mesmo quando preciso resolver alguma coisa para mim, costumo adiar até o último momento.</label><br>
-          <input id="14" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="14" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="14">14 - Tento influenciar os outros.</label><br>
-          <input id="15" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="15" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="15">15 - Sou generoso(a).</label><br>
-          <input id="16" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="16" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="16">16 - Estou satisfeito comigo mesmo(a).</label><br>
-          <input id="17" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="17" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="17">17 - Não falo muito.</label><br>
-          <input id="18" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="18" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="18">18 - Posso agredir fisicamente as pessoas quando fico muito irritado.</label><br>
-          <input id="19" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="19" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="19">19 - Resolvo meus problemas sem pensar muito.</label><br>
-          <input id="20" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="20" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="20">20 - Preocupo-me com todos.</label><br>
-          <input id="21" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="21" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="21">21 - Geralmente me sinto feliz.</label><br>
-          <input id="22" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="22" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="22">22 - Preciso de estímulo para começar a fazer as coisas.</label><br>
-          <input id="23" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="23" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="23">23 - Tenho pouco interesse por exposições de arte.</label><br>
-          <input id="24" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="24" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="24">24 - Divirto-me contrariando as pessoas.</label><br>
-          <input id="25" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="25" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="25">25 - Com frequência tomo decisões precipitadas.</label><br>
-          <input id="26" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="26" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="26">26 - Facilmente coloco as minhas idéias em prática.</label><br>
-          <input id="27" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="27" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="27">27 - Uso as pessoas para conseguir o que desejo.</label><br>
-          <input id="28" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="28" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="28">28 - Posso lidar com muitas tarefas ao mesmo tempo.</label><br>
-          <input id="29" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="29" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="29">29 - Quase sempre me sinto desanimado.</label><br>
-          <input id="30" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="30" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="30">30 - Suspeito das intenções das pessoas.</label><br>
-          <input id="31" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="31" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="31">31 - Atualmente defendo idéias diferentes daquelas que defendia antigamente.</label><br>
-          <input id="32" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="32" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="32">32 - Consigo o que eu quero.</label><br>
-          <input id="33" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="33" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="33">33 - Tenho pouca curiosidade para conhecer novos estlos musicais.</label><br>
-          <input id="34" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="34" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="34">34 - Dedico-me muito para fazer as coisas.</label><br>
-          <input id="35" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="35" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="35">35 - Espero pela decisão dos outros.</label><br>
-          <input id="36" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="36" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="36">36 - Interesso-me por teorias que tentam explicar o universo.</label><br>
-          <input id="37" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="37" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="37">37 - Tenho pouca paciência para terminar tarefas muito longas ou difíceis.</label><br>
-          <input id="38" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="38" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="38">38 - Sou uma pessoa tímida.</label><br>
-          <input id="39" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="39" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="39">39 - Tenho alguns inimigos.</label><br>
-          <input id="40" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="40" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="40">40 - Acho que minha vida é vazia e sem emoção.</label><br>
-          <input id="41" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="41" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="41">41 - Começo rapidamente as tarefas que tenho para fazer.</label><br>
-          <input id="42" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="42" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="42">42 - Acho pouco interessantes exposições fotográficas.</label><br>
-          <input id="43" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="43" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="43">43 - Respeito o ponto de vista dos outros.</label><br>
-          <input id="44" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="44" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="44">44 - Tenho dificuldade para me adaptar a trabalhos que envolvam uma rotina fixa.</label><br>
-          <input id="45" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="45" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="45">45 - Antes de agir, penso no que pode acontecer.</label><br>
-          <input id="46" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="46" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="46">46 - Sinto-me mal se não cumpro algo que prometi.</label><br>
-          <input id="47" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="47" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="47">47 - Adoro atividades em grupo.</label><br>
-          <input id="48" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="48" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="48">48 - Tudo o que posso ver a minha frente é mais desprazer do que prazer.</label><br>
-          <input id="49" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="49" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="49">49 - Gosto de ir a lugares que não conheço.</label><br>
-          <input id="50" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="50" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="50">50 - Converso com muitas pessoas diferentes quando vou a festas.</label><br>
-          <input id="51" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="51" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="51">51 - Ajo impulsivamente quando alguma coisa está me aborrecendo.</label><br>
-          <input id="52" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="52" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="52">52 - Gosto de ter uma vida social agitada.</label><br>
-          <input id="53" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="53" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="53">53 - Participar de atividades que envolvam criatividade e/ou fantasia me empolga.</label><br>
-          <input id="54" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="54" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="54">54 - Me esforço para ter destaque na escola ou no trabalho.</label><br>
-          <input id="55" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="55" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="55">55 - Geralmente faço o que meus amigos e parentes querem, embora não concorde com eles, com<br> medo que se afastem de mim.</label><br>
-          <input id="56" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="56" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="56">56 - Tenho pouco interesse por idéias abstratas.</label><br>
-          <input id="57" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="57" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="57">57 - Acho que os outros zombam de mim.</label><br>
-          <input id="58" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="58" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="58">58 - Costumo fazer sacrifícios para conseguir o que quero.</label><br>
-          <input id="59" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="59" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="59">59 - Acho natural que os valores morais mudem ao longo do tempo.</label><br>
-          <input id="60" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="60" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="60">60 - Tenho muito medo de que os meus amigos deixem de gostar de mim.</label><br>
-          <input id="61" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="61" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="61">61 - Tento incentivar as pessoas.</label><br>
-          <input id="62" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="62" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="62">62 - Sou uma pessoa com pouca imaginação.</label><br>
-          <input id="63" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="63" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="63">63 - Faço coisas consideradas perigosas.</label><br>
         </div>
         <div class="col">
-          <input id="64" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="64" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="64">64 - Penso sobre o que preciso fazer para alcançar meus objetivos.</label><br>
-          <input id="65" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="65" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="65">65 - Sou uma pessoa nervosa.</label><br>
-          <input id="66" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="66" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="66">66 - Costumo ficar calado quando estou entre estranhos.</label><br>
-          <input id="67" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="67" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="67">67 - Resolvo meus problemas com rapidez.</label><br>
-          <input id="68" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="68" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="68">68 - Confio no que as pessoas dizem.</label><br>
-          <input id="69" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="69" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="69">69 - Acho que não existe uma verdade absoluta.</label><br>
-          <input id="70" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="70" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="70">70 - Por mais que me esforce, sei que não sou capaz de superar os obstáculos que tenho que enfrentar no dia a dia.</label><br>
-          <input id="71" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="71" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="71">71 - Envolvo-me rapidamente com os outros.</label><br>
-          <input id="72" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="72" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="72">72 - Gosto de pensar sobre soluções diferentes para problemas complexos.</label><br>
-          <input id="73" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="73" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="73">73 - Deixo de fazer as coisas que desejo por medo de ser criticado pelos outros.</label><br>
-          <input id="74" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="74" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="74">74 - Acredito que a maioria dos valores morais são dependentes da época e do lugar.</label><br>
-          <input id="75" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="75" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="75">75 - Fico muito tímido quando estou entre desconhecidos.</label><br>
-          <input id="76" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="76" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="76">76 - Preocupo-me em agir segundo as leis.</label><br>
-          <input id="77" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="77" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="77">77 - Meu humor  varia constantemente.</label><br>
-          <input id="78" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="78" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="78">78 - Necessito estar no centro das atenções.</label><br>
-          <input id="79" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="79" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="79">79 - Sinto-me muito inseguro quando tenho que fazer coisas que nunca fiz antes.</label><br>
-          <input id="80" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="80" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="80">80 - As pessoas dizem que sou muito detalhista.</label><br>
-          <input id="81" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="81" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="81">81 - Evito discussões filosóficas.</label><br>
-          <input id="82" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="82" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="82">82 - Não gosto de expressar as minhas idéias, pois tenho medo de ser ridicularizado.</label><br>
-          <input id="83" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="83" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="83">83 - Sou capaz de assumir tarefas importantes.</label><br>
-          <input id="84" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="84" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="84">84 - Gosto de manter a rotina.</label><br>
-          <input id="85" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="85" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="85">85 - Acho que faço bem as coisas.</label><br>
-          <input id="86" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="86" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="86">86 - Sou uma pessoa irritável.</label><br>
-          <input id="87" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="87" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="87">87 - Costumo enganar as pessoas.</label><br>
-          <input id="88" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="88" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="88">88 - Gosto de trabalhos artísticos que são considerados estranhos.</label><br>
-          <input id="89" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="89" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="89">89 - Tenho muita dificuldade em tomar decisões na minha vida.</label><br>
-          <input id="90" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="90" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="90">90 - Vivo minhas emoções intensamente.</label><br>
-          <input id="91" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="91" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="91">91 - Gosto de fazer coisas que exigem muito de mim.</label><br>
-          <input id="92" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="92" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="92">92 - Sofro quando encontro alguém que está com dificuldades.</label><br>
-          <input id="93" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="93" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="93">93 - É comum terem inveja de mim.</label><br>
-          <input id="94" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="94" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="94">94 - Sempre que posso, mudo o trajeto nos meus percursos diários.</label><br>
-          <input id="95" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="95" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="95">95 - Tenho dificuldade de terminar as tarefas, pois me distraio muito com outras coisas.</label><br>
-          <input id="96" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="96" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="96">96 - Preocupo-me com aqueles que estão numa situação pior que a minha.</label><br>
-          <input id="97" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="97" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="97">97 - Sou comunicativo.</label><br>
-          <input id="98" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="98" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="98">98 - Acho que os outros podem tentar me prejudicar.</label><br>
-          <input id="99" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="99" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="99">99 - Sinto uma incontrolável vontade de falar, mesmo que seja com quem não conheço.</label><br>
-          <input id="100" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="100" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="100">100 - Eu paro de fazer as coisas quando elas ficam muito difíceis.</label><br>
-          <input id="101" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="101" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="101">101 - Escolho as palavras com cuidado.</label><br>
-          <input id="102" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="102" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="102">102 - Com frequência, passo por períodos em que fico extremamente irritável, incomodando-me com qualquer coisa.</label><br>
-          <input id="103" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="103" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="103">103 - Raramente mostro um trabalho a outras pessoas antes de revisá-lo cuidadosamente.</label><br>
-          <input id="104" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="104" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="104">104 - Importo-me com os sentimentos dos outros.</label><br>
-          <input id="105" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="105" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="105">105 - Faço muitas coisas durante as minhas horas de folga.</label><br>
-          <input id="106" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="106" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="106">106 - Estou cansado de viver.</label><br>
-          <input id="107" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="107" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="107">107 - Gosto de quebrar regras.</label><br>
-          <input id="108" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="108" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="108">108 - Costumo tomar a iniciativa e conversar com os outros.</label><br>
-          <input id="109" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="109" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="109">109 - Respeito autoridades.</label><br>
-          <input id="110" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="110" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="110">110 - Sou uma pessoa insegura.</label><br>
-          <input id="111" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="111" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="111">111 - Quando estou entre um grupo, gosto que me dêem atenção.</label><br>
-          <input id="112" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="112" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="112">112 - Meus amigos dizem que eu trabalho / estudo demais.</label><br>
-          <input id="113" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="113" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="113">113 - Sinto-me entediado quando tenho que fazer as mesmas coisas.</label><br>
-          <input id="114" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="114" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="114">114 - Exijo muito de mim mesmo.</label><br>
-          <input id="115" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="115" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="115">115 - Tenho dificuldade para participar de atividades que exijam imaginação ou fantasia.</label><br>
-          <input id="116" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="116" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="116">116 - Gosto de programar detalhadamente as coisas que tenho para fazer.</label><br>
-          <input id="117" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="117" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="117">117 - Usualmente, tomo a iniciativa nas situações.</label><br>
-          <input id="118" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="118" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="118">118 - Sinto-me muito mal quando recebo alguma crítica.</label><br>
-          <input id="119" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="119" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="119">119 - Acredito que as pessoas tenham uma natureza ruim.</label><br>
-          <input id="120" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="120" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="120">120 - Dificilmente fico sem jeito.</label><br>
-          <input id="121" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="121" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="121">121 - Só me aproximo de uma pessoa quando estou certo de que ela concorda com as minhas opiniões e <br>atitudes, para evitar críticas ou desaprovação.</label><br>
-          <input id="122" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="122" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="122">122 - Sei o que quero para minha vida.</label><br>
-          <input id="123" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="123" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="123">123 - Frequentemente questiono regras e costumes sociais.</label><br>
-          <input id="124" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="124" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="124">124 - Tenho uma grande dificuldade em dormir.</label><br>
-          <input id="125" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="125" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="125">125 - Preocupo-me em agradar as pessoas.</label><br>
-          <input id="126" name="answers[]" type="text" maxlength="1" size="1" required>
+          <input id="126" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
           <label for="126">126 - Sou disposto a rever meus posicionamentos sobre diferentes assuntos.</label><br>            
         </div>
       </div>
@@ -746,6 +746,451 @@
         ]
       ];
 
+      #factor: SOCIALIZAÇÃO
+      $percentileValues['s'] = [
+        5 => 3.97,
+        10 => 4.35,
+        15 => 4.57,
+        20 => 4.74,
+        25 => 4.88,
+        30 => 4.99,
+        35 => 5.10,
+        40 => 5.21,
+        45 => 5.29,
+        50 => 5.39,
+        55 => 5.49,
+        60 => 5.57,
+        65 => 5.65,
+        70 => 5.75,
+        75 => 5.85,
+        80 => 5.94,
+        85 => 6.05,
+        90 => 6.18,
+        95 => 6.35
+      ];
+      $definitionReference['s'] = [
+        "Muito Baixo" => "texto exemplo muito baixo s factor", 
+        "Baixo" => "texto exemplo baixo s factor", 
+        "Médio" => "texto exemplo medio s factor", 
+        "Alto" => "texto exemplo alto s factor", 
+        "Muito Alto" => "texto exemplo muito alto s factor"
+      ];
+      $seemReference['s'] = 2;
+      #facet: E1 - AMABILIDADE
+      $facetName['s1'] = "S1";
+      $facetDescription['s1'] = "AMABILIDADE"; 
+      $requiredQuestions['s1'] = [ 2, 4, 12, 15, 20, 43, 46, 61, 92, 96, 104, 125 ];
+      $percentileValues['s1'] = [
+        5 => 3.92,
+        10 => 4.42,
+        15 => 4.73,
+        20 => 4.92,
+        25 => 5.09,
+        30 => 5.25,
+        35 => 5.42,
+        40 => 5.50,
+        45 => 5.58,
+        50 => 5.73,
+        55 => 5.83,
+        60 => 5.92,
+        65 => 6.08,
+        70 => 6.17,
+        75 => 6.26,
+        80 => 6.36,
+        85 => 6.50,
+        90 => 6.64,
+        95 => 6.82
+      ];
+      $definitionReference['s1'] = [
+        "Muito Baixo" => "texto exemplo muito baixo s1 ", 
+        "Baixo" => "texto exemplo baixo s1 ", 
+        "Médio" => "texto exemplo medio s1 ", 
+        "Alto" => "texto exemplo alto s1 ", 
+        "Muito Alto" => "texto exemplo muito alto s1 "
+      ];
+      $seemReference['s1'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 30
+        ]
+      ];
+
+      #facet: S2 - PRÓSOCIABILIDADE
+      $facetName['s2'] = "S2";
+      $facetDescription['s2'] = "PRÓSOCIABILIDADE"; 
+      $requiredQuestions['s2'] = [ 18, 24, 27, 63, 76, 87, 107, 109 ];
+      $percentileValues['s2'] = [
+        5 => 3.71,
+        10 => 4.25,
+        15 => 4.57,
+        20 => 4.86,
+        25 => 5.00,
+        30 => 5.19,
+        35 => 5.38,
+        40 => 5.50,
+        45 => 5.63,
+        50 => 5.75,
+        55 => 5.88,
+        60 => 6.00,
+        65 => 6.13,
+        70 => 6.25,
+        75 => 6.29,
+        80 => 6.50,
+        85 => 6.57,
+        90 => 6.75,
+        95 => 7.00
+      ];
+      $definitionReference['s2'] = [
+        "Muito Baixo" => "texto exemplo muito baixo s2 ", 
+        "Baixo" => "texto exemplo baixo s2 ", 
+        "Médio" => "texto exemplo medio s2 ", 
+        "Alto" => "texto exemplo alto s2 ", 
+        "Muito Alto" => "texto exemplo muito alto s2 "
+      ];
+      $seemReference['s2'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 30
+        ]
+      ];
+
+      #facet: S3 - CONFIANÇA NAS PESSOAS
+      $facetName['s3'] = "S3";
+      $facetDescription['s3'] = "CONFIANÇA NAS PESSOAS"; 
+      $requiredQuestions['s3'] = [ 7, 10, 30, 39, 57, 68, 98, 119 ];
+      $percentileValues['s3'] = [
+        5 => 3.00,
+        10 => 3.38,
+        15 => 3.63,
+        20 => 3.88,
+        25 => 4.13,
+        30 => 4.25,
+        35 => 4.38,
+        40 => 4.50,
+        45 => 4.63,
+        50 => 4.75,
+        55 => 5.00,
+        60 => 5.13,
+        65 => 5.13,
+        70 => 5.25,
+        75 => 5.50,
+        80 => 5.63,
+        85 => 5.75,
+        90 => 6.00,
+        95 => 6.25
+      ];
+      $definitionReference['s3'] = [
+        "Muito Baixo" => "texto exemplo muito baixo s3 ", 
+        "Baixo" => "texto exemplo baixo s3 ", 
+        "Médio" => "texto exemplo medio s3 ", 
+        "Alto" => "texto exemplo alto s3 ", 
+        "Muito Alto" => "texto exemplo muito alto s3 "
+      ];
+      $seemReference['s3'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 30,
+          2 => 85
+        ]
+      ];
+
+      #factor: REALIZAÇÃO
+      $percentileValues['r'] = [
+        5 => 3.50,
+        10 => 3.85,
+        15 => 4.11,
+        20 => 4.30,
+        25 => 4.46,
+        30 => 4.58,
+        35 => 4.70,
+        40 => 4.83,
+        45 => 4.94,
+        50 => 5.03,
+        55 => 5.13,
+        60 => 5.24,
+        65 => 5.33,
+        70 => 5.43,
+        75 => 5.54,
+        80 => 5.65,
+        85 => 5.78,
+        90 => 5.95,
+        95 => 6.18
+      ];
+      $definitionReference['r'] = [
+        "Muito Baixo" => "texto exemplo muito baixo r factor", 
+        "Baixo" => "texto exemplo baixo r factor", 
+        "Médio" => "texto exemplo medio r factor", 
+        "Alto" => "texto exemplo alto r factor", 
+        "Muito Alto" => "texto exemplo muito alto r factor"
+      ];
+      $seemReference['r'] = 2;
+      #facet: R1 - COMPETENCIA
+      $facetName['r1'] = "R1";
+      $facetDescription['r1'] = "COMPETENCIA"; 
+      $requiredQuestions['r1'] = [ 28, 41, 58, 64, 67, 72, 83, 85, 91, 122 ];
+      $percentileValues['r1'] = [
+        5 => 3.50,
+        10 => 3.90,
+        15 => 4.20,
+        20 => 4.43,
+        25 => 4.60,
+        30 => 4.80,
+        35 => 4.90,
+        40 => 5.00,
+        45 => 5.14,
+        50 => 5.29,
+        55 => 5.40,
+        60 => 5.50,
+        65 => 5.60,
+        70 => 5.70,
+        75 => 5.86,
+        80 => 6.00,
+        85 => 6.10,
+        90 => 6.29,
+        95 => 6.50
+      ];
+      $definitionReference['r1'] = [
+        "Muito Baixo" => "texto exemplo muito baixo r1 ", 
+        "Baixo" => "texto exemplo baixo r1 ", 
+        "Médio" => "texto exemplo medio r1 ", 
+        "Alto" => "texto exemplo alto r1 ", 
+        "Muito Alto" => "texto exemplo muito alto r1 "
+      ];
+      $seemReference['r1'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 50
+        ]
+      ];
+
+      #facet: R2 - PONDERAÇÃO
+      $facetName['r2'] = "R2";
+      $facetDescription['r2'] = "PONDERAÇÃO"; 
+      $requiredQuestions['r2'] = [ 9, 19, 45, 101 ];
+      $percentileValues['r2'] = [
+        5 => 2.75,
+        10 => 3.25,
+        15 => 3.75,
+        20 => 4.00,
+        25 => 4.00,
+        30 => 4.25,
+        35 => 4.50,
+        40 => 4.75,
+        45 => 4.75,
+        50 => 5.00,
+        55 => 5.25,
+        60 => 5.25,
+        65 => 5.50,
+        70 => 5.50,
+        75 => 5.75,
+        80 => 6.00,
+        85 => 6.25,
+        90 => 6.50,
+        95 => 6.75
+      ];
+      $definitionReference['r2'] = [
+        "Muito Baixo" => "texto exemplo muito baixo r2 ", 
+        "Baixo" => "texto exemplo baixo r2 ", 
+        "Médio" => "texto exemplo medio r2 ", 
+        "Alto" => "texto exemplo alto r2 ", 
+        "Muito Alto" => "texto exemplo muito alto r2 "
+      ];
+      $seemReference['r2'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 50
+        ]
+      ];
+
+      #facet: R3 - EMPENHO
+      $facetName['r3'] = "R3";
+      $facetDescription['r3'] = "EMPENHO"; 
+      $requiredQuestions['r3'] = [ 34, 54, 80, 103, 112, 114, 116 ];
+      $percentileValues['r3'] = [
+        5 => 3.00,
+        10 => 3.29,
+        15 => 3.57,
+        20 => 3.86,
+        25 => 4.00,
+        30 => 4.17,
+        35 => 4.43,
+        40 => 4.57,
+        45 => 4.71,
+        50 => 4.86,
+        55 => 5.00,
+        60 => 5.14,
+        65 => 5.29,
+        70 => 5.43,
+        75 => 5.57,
+        80 => 5.71,
+        85 => 5.86,
+        90 => 6.14,
+        95 => 6.43
+      ];
+      $definitionReference['r3'] = [
+        "Muito Baixo" => "texto exemplo muito baixo r3 ", 
+        "Baixo" => "texto exemplo baixo r3 ", 
+        "Médio" => "texto exemplo medio r3 ", 
+        "Alto" => "texto exemplo alto r3 ", 
+        "Muito Alto" => "texto exemplo muito alto r3 "
+      ];
+      $seemReference['r3'] = [
+        "operation" => "greater",
+        "value" => [
+          1 => 50
+        ]
+      ];
+
+      #factor: ABERTURA
+      $percentileValues['a'] = [
+        5 => 3.54,
+        10 => 3.78,
+        15 => 3.95,
+        20 => 4.08,
+        25 => 4.18,
+        30 => 4.30,
+        35 => 4.39,
+        40 => 4.48,
+        45 => 4.56,
+        50 => 4.65,
+        55 => 4.73,
+        60 => 4.82,
+        65 => 4.91,
+        70 => 5.03,
+        75 => 5.16,
+        80 => 5.29,
+        85 => 5.47,
+        90 => 5.66,
+        95 => 5.90
+      ];
+      $definitionReference['a'] = [
+        "Muito Baixo" => "texto exemplo muito baixo a factor", 
+        "Baixo" => "texto exemplo baixo a factor", 
+        "Médio" => "texto exemplo medio a factor", 
+        "Alto" => "texto exemplo alto a factor", 
+        "Muito Alto" => "texto exemplo muito alto a factor"
+      ];
+      $seemReference['a'] = 2;
+      #facet: A1 - ABERTURA DE IDEIAS
+      $facetName['a1'] = "A1";
+      $facetDescription['a1'] = "ABERTURA DE IDEIAS"; 
+      $requiredQuestions['a1'] = [ 23, 33, 36, 42, 53, 56, 62, 81, 88, 115 ];
+      $percentileValues['a1'] = [
+        5 => 2.90,
+        10 => 3.30,
+        15 => 3.50,
+        20 => 3.70,
+        25 => 3.90,
+        30 => 4.00,
+        35 => 4.10,
+        40 => 4.30,
+        45 => 4.40,
+        50 => 4.60,
+        55 => 4.70,
+        60 => 4.80,
+        65 => 5.00,
+        70 => 5.10,
+        75 => 5.30,
+        80 => 5.50,
+        85 => 5.70,
+        90 => 6.00,
+        95 => 6.30
+      ];
+      $definitionReference['a1'] = [
+        "Muito Baixo" => "texto exemplo muito baixo a1 ", 
+        "Baixo" => "texto exemplo baixo a1 ", 
+        "Médio" => "texto exemplo medio a1 ", 
+        "Alto" => "texto exemplo alto a1 ", 
+        "Muito Alto" => "texto exemplo muito alto a1 "
+      ];
+      $seemReference['a1'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 15,
+          2 => 85
+        ]
+      ];
+
+      #facet: A2 - LIBERALISMO
+      $facetName['a2'] = "A2";
+      $facetDescription['a2'] = "LIBERALISMO"; 
+      $requiredQuestions['a2'] = [ 1, 31, 59, 69, 74, 123, 126 ];
+      $percentileValues['a2'] = [
+        5 => 3.14,
+        10 => 3.57,
+        15 => 3.71,
+        20 => 4.00,
+        25 => 4.14,
+        30 => 4.29,
+        35 => 4.43,
+        40 => 4.57,
+        45 => 4.71,
+        50 => 4.86,
+        55 => 5.00,
+        60 => 5.14,
+        65 => 5.29,
+        70 => 5.43,
+        75 => 5.57,
+        80 => 5.71,
+        85 => 6.00,
+        90 => 6.14,
+        95 => 6.43
+      ];
+      $definitionReference['a2'] = [
+        "Muito Baixo" => "texto exemplo muito baixo a2 ", 
+        "Baixo" => "texto exemplo baixo a2 ", 
+        "Médio" => "texto exemplo medio a2 ", 
+        "Alto" => "texto exemplo alto a2 ", 
+        "Muito Alto" => "texto exemplo muito alto a2 "
+      ];
+      $seemReference['a2'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 15,
+          2 => 85
+        ]
+      ];
+
+      #facet: A3 - BUSCA POR NOVIDADES
+      $facetName['a3'] = "A3";
+      $facetDescription['a3'] = "BUSCA POR NOVIDADES"; 
+      $requiredQuestions['a3'] = [ 6, 44, 49, 84, 94, 113 ];
+      $percentileValues['a3'] = [
+        5 => 2.83,
+        10 => 3.33,
+        15 => 3.50,
+        20 => 3.75,
+        25 => 4.00,
+        30 => 4.00,
+        35 => 4.23,
+        40 => 4.33,
+        45 => 4.50,
+        50 => 4.67,
+        55 => 4.83,
+        60 => 5.00,
+        65 => 5.00,
+        70 => 5.17,
+        75 => 5.33,
+        80 => 5.50,
+        85 => 5.67,
+        90 => 6.00,
+        95 => 6.17
+      ];
+      $definitionReference['a3'] = [
+        "Muito Baixo" => "texto exemplo muito baixo a3 ", 
+        "Baixo" => "texto exemplo baixo a3 ", 
+        "Médio" => "texto exemplo medio a3 ", 
+        "Alto" => "texto exemplo alto a3 ", 
+        "Muito Alto" => "texto exemplo muito alto a3 "
+      ];
+      $seemReference['a3'] = [
+        "operation" => "between",
+        "value" => [
+          1 => 15,
+          2 => 85
+        ]
+      ];
+
       $converter = new Converter($questionsToInverter);
       $questionsArray = $converter->Convert($_POST['answers']);
       #object instantiation
@@ -774,6 +1219,42 @@
         $classificationReference,
         $definitionReference['e'],
         $seemReference['e']
+      );
+      $factors['s'] = new Factor(
+        "SOCIALIZAÇÃO",
+        [
+          new Facet($facetName['s1'], $facetDescription['s1'], $questionsArray, $requiredQuestions['s1'], $percentileValues['s1'], $classificationReference, $definitionReference['s1'], $seemReference['s1']),
+          new Facet($facetName['s2'], $facetDescription['s2'], $questionsArray, $requiredQuestions['s2'], $percentileValues['s2'], $classificationReference, $definitionReference['s2'], $seemReference['s2']),
+          new Facet($facetName['s3'], $facetDescription['s3'], $questionsArray, $requiredQuestions['s3'], $percentileValues['s3'], $classificationReference, $definitionReference['s3'], $seemReference['s3'])
+        ],
+        $percentileValues['s'],
+        $classificationReference,
+        $definitionReference['s'],
+        $seemReference['s']
+      );
+      $factors['r'] = new Factor(
+        "REALIZAÇÃO",
+        [
+          new Facet($facetName['r1'], $facetDescription['r1'], $questionsArray, $requiredQuestions['r1'], $percentileValues['r1'], $classificationReference, $definitionReference['r1'], $seemReference['r1']),
+          new Facet($facetName['r2'], $facetDescription['r2'], $questionsArray, $requiredQuestions['r2'], $percentileValues['r2'], $classificationReference, $definitionReference['r2'], $seemReference['r2']),
+          new Facet($facetName['r3'], $facetDescription['r3'], $questionsArray, $requiredQuestions['r3'], $percentileValues['r3'], $classificationReference, $definitionReference['r3'], $seemReference['r3'])
+        ],
+        $percentileValues['r'],
+        $classificationReference,
+        $definitionReference['r'],
+        $seemReference['r']
+      );
+      $factors['a'] = new Factor(
+        "ABERTURA",
+        [
+          new Facet($facetName['a1'], $facetDescription['a1'], $questionsArray, $requiredQuestions['a1'], $percentileValues['a1'], $classificationReference, $definitionReference['a1'], $seemReference['a1']),
+          new Facet($facetName['a2'], $facetDescription['a2'], $questionsArray, $requiredQuestions['a2'], $percentileValues['a2'], $classificationReference, $definitionReference['a2'], $seemReference['a2']),
+          new Facet($facetName['a3'], $facetDescription['a3'], $questionsArray, $requiredQuestions['a3'], $percentileValues['a3'], $classificationReference, $definitionReference['a3'], $seemReference['a3'])
+        ],
+        $percentileValues['a'],
+        $classificationReference,
+        $definitionReference['a'],
+        $seemReference['a']
       );
       $test = new Test($factors, $_POST['start'], $_POST['termination'], $_POST['name'], $_POST['sex'], $_POST['birth'], $_POST['schooling'], $seemReference['test']);
       ?>
