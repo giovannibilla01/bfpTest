@@ -38,6 +38,7 @@
                     return $index;
                 }
             }
+            return 100;
         }
 
         private function RankAssignment($percentile, $classificationReference){
