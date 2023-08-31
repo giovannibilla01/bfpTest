@@ -82,5 +82,9 @@
                 </tr>
             ";
         }
+
+        public function Chart() {
+            echo "['$this->name',  $this->percentile],";
+        }
     }
 ?>
