@@ -170,15 +170,7 @@
           Data Realização: <?php echo $test->GetDate()->format('d/m/Y'); ?>
         </div>
         <div class="col text-right">
-          Tempo: 
-          <?php
-          $interval = $test->GetDuration(); 
-          if ($interval->h != 0) {
-            echo $interval->h . " Horas " . $interval->i . " Minutos " . $interval->s . " Segundos";
-          } else {
-            echo $interval->i . " Minutos " . $interval->s . " Segundos";
-          }
-        ?>
+          Tempo: <?php echo $test->GetDuration(); ?>
         </div>
       </div>
       <div class="row">
@@ -191,7 +183,7 @@
       </div>
       <div class="row">
         <div class="col">
-          Idade: <?php echo $test->GetAge() . " Anos"; ?>
+          Idade: <?php echo $test->GetAge(); ?>
         </div>
         <div class="col">
           Escolaridade: <?php echo $test->GetSchooling(); ?>
@@ -219,13 +211,13 @@
               </tr>
             </thead>
             <tbody>
-      <?php
-      $factor->Table();
-      $facets = $factor->GetFacets();
-      foreach ($facets as $facet) {
-        $facet->Table();
-      }
-      ?>
+              <?php
+              $factor->Table();
+              $facets = $factor->GetFacets();
+              foreach ($facets as $facet) {
+                $facet->Table();
+              }
+              ?>
             </tbody>
           </table>
         </div>
