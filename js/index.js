@@ -15,6 +15,17 @@ function reloadPage() {
     window.location.href = "/BFPtest/";
 }
 
+function activeMoreSpan(span) {
+    let activeMoreButton = document.getElementById(span.id + "-button")   
+    if (span.style.display != 'inline') {
+        span.style.display = 'inline'
+        activeMoreButton.innerHTML = ' Ler Menos'
+    } else {
+        span.style.display = 'none'
+        activeMoreButton.innerHTML = ' Ler Mais'
+    }
+}
+
 const inputAnswers = document.querySelectorAll('.inputAnswers');
 
 inputAnswers.forEach((input, index) => {

@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col text-center">
           <figure>
-            <img src="./images/image01.png" alt="Orientação para Preenchimento do Questionario">
+            <img id="img-01" src="./images/image01.png" alt="Orientação para Preenchimento do Questionario">
             <figcaption>Imagem 01 - Orientação para Preenchimento do Questionario</figcaption>
           </figure>
           <form method="post">
@@ -170,15 +170,7 @@
           Data Realização: <?php echo $test->GetDate()->format('d/m/Y'); ?>
         </div>
         <div class="col text-right">
-          Tempo: 
-          <?php
-          $interval = $test->GetDuration(); 
-          if ($interval->h != 0) {
-            echo $interval->h . " Horas " . $interval->i . " Minutos " . $interval->s . " Segundos";
-          } else {
-            echo $interval->i . " Minutos " . $interval->s . " Segundos";
-          }
-        ?>
+          Tempo: <?php echo $test->GetDuration(); ?>
         </div>
       </div>
       <div class="row">
@@ -191,7 +183,7 @@
       </div>
       <div class="row">
         <div class="col">
-          Idade: <?php echo $test->GetAge() . " Anos"; ?>
+          Idade: <?php echo $test->GetAge(); ?>
         </div>
         <div class="col">
           Escolaridade: <?php echo $test->GetSchooling(); ?>
@@ -219,13 +211,13 @@
               </tr>
             </thead>
             <tbody>
-      <?php
-      $factor->Table();
-      $facets = $factor->GetFacets();
-      foreach ($facets as $facet) {
-        $facet->Table();
-      }
-      ?>
+              <?php
+              $factor->Table();
+              $facets = $factor->GetFacets();
+              foreach ($facets as $facet) {
+                $facet->Table();
+              }
+              ?>
             </tbody>
           </table>
         </div>
@@ -236,6 +228,11 @@
       <div class="row">
         <div class="col text-center">
           <h3>Parecer do Teste: <?php echo $test->GetSeem() ?></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <div id="curve_chart"></div>
         </div>
       </div>
       <div class="row">
@@ -251,6 +248,39 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <?php if(isset($_POST['answers'])) {?>
+    <!-- Google Charts JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Factor/Facet', 'Percentil'],
+          <?php
+          foreach ($test->factors as $factor) {
+            $factor->Chart();
+            $facets = $factor->GetFacets();
+            foreach ($facets as $facet) {
+              $facet->Chart();
+            }
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Análise gráfica de Percentil ',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <?php } ?>
     <!-- JavaScript -->
     <script src="./js/index.js"></script>
   </body>

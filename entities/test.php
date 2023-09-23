@@ -31,13 +31,18 @@ use ObjectFactor\Factor;
       }
 
       public function GetDuration() {
-        return $this->termination->diff($this->start);
+        $interval =  $this->termination->diff($this->start);
+        if ($interval->h != 0) {
+          return $interval->h . " Horas " . $interval->i . " Minutos " . $interval->s . " Segundos";
+        } else {
+          return $interval->i . " Minutos " . $interval->s . " Segundos";
+        }
       }
 
       public function GetAge() {
         $dateTimeNow = new DateTime();
         $interval = $dateTimeNow->diff($this->birth);
-        return $interval->y;
+        return $interval->y . " Anos";
       }
 
       public function GetName() {

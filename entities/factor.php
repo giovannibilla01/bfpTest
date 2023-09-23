@@ -69,7 +69,7 @@
 
         public function Table() {
             echo "
-                <tr>
+                <tr'>
                     <th scope='row'>$this->name</th>
                     <th>$this->score</th>
                     <th>$this->rawScore</th>
@@ -77,10 +77,36 @@
                     <th>$this->classification</th>
                     <th>$this->seem</th>
                 </tr>
-                <tr>
-                    <td colspan='6'>$this->definition</td>
-                </tr>
             ";
+            if (!$this->definition == null && !$this->definition == "") {
+                echo "
+                    <tr>
+                        <td colspan='6'>
+                ";
+                if (strlen($this->definition) <= 190) {
+                    echo $this->definition;
+                } else {
+                    $definitionSlices = str_split($this->definition, 190);
+                    echo $definitionSlices[0];
+                    $editedName = str_replace(" ", "", $this->name);
+                    echo "<span class='concealableMoreSpan' id='$editedName'>";
+                    foreach ($definitionSlices as $key => $slice) {
+                        if ($key != 0) {
+                            echo $slice;
+                        }
+                    }
+                    echo "</span>";
+                    echo "<span class='concealableButtonSpan' id='$editedName-button' onclick='activeMoreSpan($editedName)'> Ler Mais</span>";
+                }
+                echo "
+                        </td>
+                    </tr>
+                ";
+            }
+        }
+
+        public function Chart() {
+            echo "['$this->name',  $this->percentile],";
         }
     }
 ?>
