@@ -101,10 +101,27 @@
                     <td>$this->classification</td>
                     <td>$this->seem</td>
                 </tr>
-                <tr>
-                    <td colspan='6'>$this->definition</td>
-                </tr>
             ";
+            if (!$this->definition == null && !$this->definition == "") {
+                echo "
+                    <tr>
+                        <td colspan='6'>
+                ";
+                $definitionSlices = str_split($this->definition, 190);
+                echo $definitionSlices[0];
+                echo "<span class='concealableMoreSpan' id='$this->name'>";
+                foreach ($definitionSlices as $key => $slice) {
+                    if ($key != 0) {
+                        echo $slice;
+                    }
+                }
+                echo "</span>";
+                echo "<span class='concealableButtonSpan' id='$this->name-button' onclick='activeMoreSpan($this->name)'> Ler Mais</span>";
+                echo "
+                        </td>
+                    </tr>
+                ";
+            }
         }
 
         public function Chart() {

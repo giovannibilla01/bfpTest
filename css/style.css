@@ -12,3 +12,20 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 2rem;
 }
+
+.concealableMoreSpan {
+    display: none;
+}
+
+.concealableButtonSpan {
+    color: blue;
+    cursor: pointer;
+}
+
+#img-01 {
+    width: 70%;
+}
+
+#curve_chart {
+    height: 80vh;
+}

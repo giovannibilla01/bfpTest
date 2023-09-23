@@ -493,15 +493,15 @@
     "definitionReference": {
         "factors": {
             "n": {
-                "Muito Baixo": "texto exemplo muito baixo n factor", 
-                "Baixo": "texto exemplo baixo n factor", 
-                "Médio": "texto exemplo medio n factor", 
-                "Alto": "texto exemplo alto n factor", 
-                "Muito Alto": "texto exemplo muito alto n factor"
+                "Muito Baixo": "", 
+                "Baixo": "", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos níveis de Neuroticismo tendem a vivenciar de forma mais intensa sofrimento psicológico, instabilidade emocional e vulnerabilidade, além de relatarem ter experiências intensas de eventos negativos, dando pouca ênfase aos aspectos positivos dos fatos. Altos níveis estão associados à ocorrência de sintomas de depressão e ansiedade, e pesquisas têm indicado a utilidade dos instrumentos para avaliação desse fator para a identificação de indivíduos com maior propensão a desenvolver esses quadros (Nunes, 2000; Nunes et al., 2001; Bienvenu et al., 2004).<br>Watson e Hubbard (1996) concluíram que o Neuroticismo também desempenha um papel importante no processo de coping. Argumentam que vários estudos mostraram que os escores de Neuroticismo têm valor preditivo em relação à ocorrência de eventos de vida estressantes, mesmo quando esses eventos são objetivamente definidos. Resumindo, os autores afirmaram que \"coisas ruins tendem a acontecer justamente com as pessoas que têm escores elevados de Neuroticismo\" (p. 748). Uma possível explicação para isso é que, de alguma forma, pessoas com altos escores nesse fator criam ativamente problemas para elas mesmas. Eles indicaram ainda que indivíduos com altos escores em Neuroticismo tendem a fazer avaliações negativistas do ambiente, ou seja, tendem a interpretar estímulos ambíguos de uma forma negativa ou ameaçadora e, por isso, normalmente veem ameaças, problemas e crises onde não existem objetivamente.", 
+                "Muito Alto": "Pessoas com altos níveis de Neuroticismo tendem a vivenciar de forma mais intensa sofrimento psicológico, instabilidade emocional e vulnerabilidade, além de relatarem ter experiências intensas de eventos negativos, dando pouca ênfase aos aspectos positivos dos fatos. Altos níveis estão associados à ocorrência de sintomas de depressão e ansiedade, e pesquisas têm indicado a utilidade dos instrumentos para avaliação desse fator para a identificação de indivíduos com maior propensão a desenvolver esses quadros (Nunes, 2000; Nunes et al., 2001; Bienvenu et al., 2004).\n \n Watson e Hubbard (1996) concluíram que o Neuroticismo também desempenha um papel importante no processo de coping. Argumentam que vários estudos mostraram que os escores de Neuroticismo têm valor preditivo em relação à ocorrência de eventos de vida estressantes, mesmo quando esses eventos são objetivamente definidos. Resumindo, os autores afirmaram que \"coisas ruins tendem a acontecer justamente com as pessoas que têm escores elevados de Neuroticismo\" (p. 748). Uma possível explicação para isso é que, de alguma forma, pessoas com altos escores nesse fator criam ativamente problemas para elas mesmas. Eles indicaram ainda que indivíduos com altos escores em Neuroticismo tendem a fazer avaliações negativistas do ambiente, ou seja, tendem a interpretar estímulos ambíguos de uma forma negativa ou ameaçadora e, por isso, normalmente veem ameaças, problemas e crises onde não existem objetivamente."
             },
             "e": {
                 "Muito Baixo": "texto exemplo muito baixo n factor", 
-                "Baixo": "texto exemplo baixo n factor", 
+                "Baixo": "texto exemplo baixo n", 
                 "Médio": "texto exemplo medio n factor", 
                 "Alto": "texto exemplo alto n factor", 
                 "Muito Alto": "texto exemplo muito alto n factor"
