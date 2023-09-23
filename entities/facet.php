@@ -107,18 +107,30 @@
                     <tr>
                         <td colspan='6'>
                 ";
-                $definitionSlices = str_split($this->definition, 190);
-                echo $definitionSlices[0];
-                $editedName = str_replace(" ", "", $this->name);
-                echo "<span class='concealableMoreSpan' id='$editedName'>";
-                foreach ($definitionSlices as $key => $slice) {
-                    if ($key != 0) {
-                        echo $slice;
+                if (strlen($this->definition) <= 190) {
+                    echo $this->definition;
+                } else {
+                    $definitionSlices = str_split($this->definition, 190);
+                    echo $definitionSlices[0];
+                    $editedName = str_replace(" ", "", $this->name);
+                    echo "<span class='concealableMoreSpan' id='$editedName'>";
+                    foreach ($definitionSlices as $key => $slice) {
+                        if ($key != 0) {
+                            echo $slice;
+                        }
                     }
+                    echo "</span>";
+                    echo "<span class='concealableButtonSpan' id='$editedName-button' onclick='activeMoreSpan($editedName)'> Ler Mais</span>";
                 }
-                echo "</span>";
-                echo "<span class='concealableButtonSpan' id='$editedName-button' onclick='activeMoreSpan($editedName)'> Ler Mais</span>";
                 echo "
+                        </td>
+                    </tr>
+                ";
+            } else {
+                echo "
+                    <tr class='hiddenRow'>
+                        <td colspan='6'>
+                            &nbsp;
                         </td>
                     </tr>
                 ";
