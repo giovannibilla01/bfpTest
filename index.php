@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col">
           <div class="alert alert-warning" role="alert">
-            Este teste não deverá ser utilizado como comprovação ou laudo de qualquer especie, resultado e teste gerados com intuito meramente educativo e sem fins lucrativos!
+            Este teste não deverá ser utilizado como comprovação ou laudo de qualquer especie, resultado e teste gerados com intuito meramente educativo e sem fins lucrativos! (Perguntas e descrições meramente ilustrativas)
           </div>
         </div>
       </div>
@@ -51,12 +51,11 @@
       <div class="row">
         <div class="col">
           <label for="name">Nome Completo: </label>
-          <input type="text" id="name" name="name" class="form-control" required>
+          <input type="text" id="name" name="name" class="form-control" value="Exemplo nome" required>
         </div>
         <div class="col">
           <label for="sex">Sexo: </label>
           <select name="sex" id="sex" class="form-control" required>
-            <option></option>
             <option>Masculino</option>
             <option>Feminino</option>
           </select>
@@ -65,12 +64,11 @@
       <div class="row">
         <div class="col">
           <label for="birth">Data Nascimento: </label>
-          <input type="date" id="birth" name="birth" class="form-control" required>
+          <input type="date" id="birth" name="birth" class="form-control" value="2000-05-13" required>
         </div>
         <div class="col">
           <label for="schooling">Escolaridade: </label>
           <select name="schooling" id="schooling" class="form-control" required>
-            <option></option>
             <option>Ensino Fundamental</option>
             <option>Ensino Médio</option>
             <option>Ensino Superior Incompleto</option>
@@ -87,7 +85,7 @@
           $questions = json_decode(file_get_contents('./json/questions.json'),true);
           foreach ($questions as $key => $value) {
           ?>
-          <input id="<?php echo $key; ?>" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" required>
+          <input id="<?php echo $key; ?>" name="answers[]" class="inputAnswers" type="text" maxlength="1" size="1" value="<?= rand(1, 7) ?>">
           <label for="<?php echo $key; ?>"><?php echo $key; ?> - <?php echo $value; ?></label><br>
           <?php 
           if ($key == 63) echo"</div><div class='col'>";
