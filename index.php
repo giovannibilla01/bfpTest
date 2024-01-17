@@ -14,6 +14,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
+          <div class="alert alert-warning" role="alert">
+            Este teste não deverá ser utilizado como comprovação ou laudo de qualquer especie, resultado e teste gerados com intuito meramente educativo e sem fins lucrativos!
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
           <h1>Bateria Fatorial de Personalidade</h1>
         </div>
       </div>
@@ -197,7 +204,7 @@
       <?php 
       foreach ($test->factors as $factor) {
       ?>
-      <div class="row">
+      <div class="row overflow color">
         <div class="col">
           <table class="table table-striped">
             <thead>
@@ -232,7 +239,7 @@
       </div>
       <div class="row">
         <div class="col text-center">
-          <div id="curve_chart"></div>
+          <div id="curve_chart" class="overflow color"></div>
         </div>
       </div>
       <div class="row">
