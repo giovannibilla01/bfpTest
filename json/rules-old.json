@@ -1,0 +1,831 @@
+{
+    "questionsToInverter": [1,10,16,17,18,19,23,24,27,30,33,38,39,42,56,57,62,63,66,81,84,87,98,107,115,119],
+    "classificationReference":{
+        "1" : {
+            "1" : 15,
+            "2" : "Muito Baixo"
+        },
+        "2" : {
+            "1" : 30,
+            "2" : "Baixo"
+        },
+        "3" : {
+            "1" : 71,
+            "2" : "Médio"
+        },
+        "4" : {
+            "1" : 85,
+            "2" : "Alto"
+        },
+        "5" : {
+            "1" : 101,
+            "2" : "Muito Alto"
+        }
+    },
+    "percentileValues": {
+        "factors": {
+            "n": {
+                "5": 1.66,
+                "10": 1.92,
+                "15": 2.13,
+                "20": 2.30,
+                "25": 2.45,
+                "30": 2.59,
+                "35": 2.73,
+                "40": 2.87,
+                "45": 3.00,
+                "50": 3.12,
+                "55": 3.25,
+                "60": 3.39,
+                "65": 3.54,
+                "70": 3.68,
+                "75": 3.86,
+                "80": 4.05,
+                "85": 4.25,
+                "90": 4.52,
+                "95": 4.94
+            },
+            "e": {
+                "5": 2.87,
+                "10": 3.19,
+                "15": 3.44,
+                "20": 3.62,
+                "25": 3.77,
+                "30": 3.89,
+                "35": 4.02,
+                "40": 4.15,
+                "45": 4.25,
+                "50": 4.38,
+                "55": 4.48,
+                "60": 4.58,
+                "65": 4.68,
+                "70": 4.80,
+                "75": 4.93,
+                "80": 5.07,
+                "85": 5.24,
+                "90": 5.44,
+                "95": 5.72
+            },
+            "s": {
+                "5": 3.97,
+                "10": 4.35,
+                "15": 4.57,
+                "20": 4.74,
+                "25": 4.88,
+                "30": 4.99,
+                "35": 5.10,
+                "40": 5.21,
+                "45": 5.29,
+                "50": 5.39,
+                "55": 5.49,
+                "60": 5.57,
+                "65": 5.65,
+                "70": 5.75,
+                "75": 5.85,
+                "80": 5.94,
+                "85": 6.05,
+                "90": 6.18,
+                "95": 6.35
+            },
+            "r": {
+                "5": 3.50,
+                "10": 3.85,
+                "15": 4.11,
+                "20": 4.30,
+                "25": 4.46,
+                "30": 4.58,
+                "35": 4.70,
+                "40": 4.83,
+                "45": 4.94,
+                "50": 5.03,
+                "55": 5.13,
+                "60": 5.24,
+                "65": 5.33,
+                "70": 5.43,
+                "75": 5.54,
+                "80": 5.65,
+                "85": 5.78,
+                "90": 5.95,
+                "95": 6.18
+            },
+            "a": {
+                "5": 3.54,
+                "10": 3.78,
+                "15": 3.95,
+                "20": 4.08,
+                "25": 4.18,
+                "30": 4.30,
+                "35": 4.39,
+                "40": 4.48,
+                "45": 4.56,
+                "50": 4.65,
+                "55": 4.73,
+                "60": 4.82,
+                "65": 4.91,
+                "70": 5.03,
+                "75": 5.16,
+                "80": 5.29,
+                "85": 5.47,
+                "90": 5.66,
+                "95": 5.90
+            }
+        },
+        "facets": {
+            "n1": {
+                "5": 1.57,
+                "10": 1.86,
+                "15": 2.14,
+                "20": 2.33,
+                "25": 2.57,
+                "30": 2.71,
+                "35": 2.89,
+                "40": 3.11,
+                "45": 3.29,
+                "50": 3.44,
+                "55": 3.57,
+                "60": 3.78,
+                "65": 3.89,
+                "70": 4.11,
+                "75": 4.33,
+                "80": 4.56,
+                "85": 4.86,
+                "90": 5.14,
+                "95": 5.67
+            },
+            "n2": {
+                "5": 1.50,
+                "10": 1.83,
+                "15": 2.17,
+                "20": 2.33,
+                "25": 2.50,
+                "30": 2.83,
+                "35": 3.00,
+                "40": 3.25,
+                "45": 3.33,
+                "50": 3.50,
+                "55": 3.83,
+                "60": 4.00,
+                "65": 4.25,
+                "70": 4.50,
+                "75": 4.67,
+                "80": 5.00,
+                "85": 5.25,
+                "90": 5.67,
+                "95": 6.17
+            },
+            "n3": {
+                "5": 1.50,
+                "10": 1.83,
+                "15": 2.17,
+                "20": 2.33,
+                "25": 2.50,
+                "30": 2.67,
+                "35": 2.83,
+                "40": 3.00,
+                "45": 3.20,
+                "50": 3.40,
+                "55": 3.60,
+                "60": 3.80,
+                "65": 4.00,
+                "70": 4.17,
+                "75": 4.33,
+                "80": 4.60,
+                "85": 4.83,
+                "90": 5.00,
+                "95": 5.50
+            },
+            "n4": {
+                "5": 1.00,
+                "10": 1.14,
+                "15": 1.25,
+                "20": 1.38,
+                "25": 1.50,
+                "30": 1.63,
+                "35": 1.75,
+                "40": 1.83,
+                "45": 2.00,
+                "50": 2.00,
+                "55": 2.14,
+                "60": 2.29,
+                "65": 2.50,
+                "70": 2.63,
+                "75": 2.88,
+                "80": 3.17,
+                "85": 3.50,
+                "90": 3.88,
+                "95": 4.63
+            },
+            "e1": {
+                "5": 2.00,
+                "10": 2.50,
+                "15": 3.00,
+                "20": 3.17,
+                "25": 3.50,
+                "30": 3.67,
+                "35": 3.83,
+                "40": 4.00,
+                "45": 4.17,
+                "50": 4.33,
+                "55": 4.50,
+                "60": 4.67,
+                "65": 4.83,
+                "70": 5.00,
+                "75": 5.17,
+                "80": 5.33,
+                "85": 5.67,
+                "90": 6.00,
+                "95": 6.33
+            },
+            "e2": {
+                "5": 2.00,
+                "10": 2.29,
+                "15": 2.57,
+                "20": 2.71,
+                "25": 2.86,
+                "30": 3.09,
+                "35": 3.17,
+                "40": 3.33,
+                "45": 3.43,
+                "50": 3.57,
+                "55": 3.71,
+                "60": 3.86,
+                "65": 4.00,
+                "70": 4.14,
+                "75": 4.43,
+                "80": 4.57,
+                "85": 4.83,
+                "90": 5.14,
+                "95": 5.57
+            },
+            "e3": {
+                "5": 3.00,
+                "10": 3.40,
+                "15": 3.80,
+                "20": 4.00,
+                "25": 4.20,
+                "30": 4.20,
+                "35": 4.40,
+                "40": 4.60,
+                "45": 4.60,
+                "50": 4.80,
+                "55": 5.00,
+                "60": 5.00,
+                "65": 5.20,
+                "70": 5.40,
+                "75": 5.60,
+                "80": 5.80,
+                "85": 5.80,
+                "90": 6.20,
+                "95": 6.40
+            },
+            "e4": {
+                "5": 2.83,
+                "10": 3.33,
+                "15": 3.67,
+                "20": 3.86,
+                "25": 4.14,
+                "30": 4.29,
+                "35": 4.43,
+                "40": 4.57,
+                "45": 4.71,
+                "50": 4.86,
+                "55": 5.00,
+                "60": 5.17,
+                "65": 5.33,
+                "70": 5.50,
+                "75": 5.67,
+                "80": 5.83,
+                "85": 6.00,
+                "90": 6.29,
+                "95": 6.57
+            },
+            "s1": {
+                "5": 3.92,
+                "10": 4.42,
+                "15": 4.73,
+                "20": 4.92,
+                "25": 5.09,
+                "30": 5.25,
+                "35": 5.42,
+                "40": 5.50,
+                "45": 5.58,
+                "50": 5.73,
+                "55": 5.83,
+                "60": 5.92,
+                "65": 6.08,
+                "70": 6.17,
+                "75": 6.26,
+                "80": 6.36,
+                "85": 6.50,
+                "90": 6.64,
+                "95": 6.82
+            },
+            "s2": {
+                "5": 3.71,
+                "10": 4.25,
+                "15": 4.57,
+                "20": 4.86,
+                "25": 5.00,
+                "30": 5.19,
+                "35": 5.38,
+                "40": 5.50,
+                "45": 5.63,
+                "50": 5.75,
+                "55": 5.88,
+                "60": 6.00,
+                "65": 6.13,
+                "70": 6.25,
+                "75": 6.29,
+                "80": 6.50,
+                "85": 6.57,
+                "90": 6.75,
+                "95": 7.00
+            },
+            "s3": {
+                "5": 3.00,
+                "10": 3.38,
+                "15": 3.63,
+                "20": 3.88,
+                "25": 4.13,
+                "30": 4.25,
+                "35": 4.38,
+                "40": 4.50,
+                "45": 4.63,
+                "50": 4.75,
+                "55": 5.00,
+                "60": 5.13,
+                "65": 5.13,
+                "70": 5.25,
+                "75": 5.50,
+                "80": 5.63,
+                "85": 5.75,
+                "90": 6.00,
+                "95": 6.25
+            },
+            "r1": {
+                "5": 3.50,
+                "10": 3.90,
+                "15": 4.20,
+                "20": 4.43,
+                "25": 4.60,
+                "30": 4.80,
+                "35": 4.90,
+                "40": 5.00,
+                "45": 5.14,
+                "50": 5.29,
+                "55": 5.40,
+                "60": 5.50,
+                "65": 5.60,
+                "70": 5.70,
+                "75": 5.86,
+                "80": 6.00,
+                "85": 6.10,
+                "90": 6.29,
+                "95": 6.50
+            },
+            "r2": {
+                "5": 2.75,
+                "10": 3.25,
+                "15": 3.75,
+                "20": 4.00,
+                "25": 4.00,
+                "30": 4.25,
+                "35": 4.50,
+                "40": 4.75,
+                "45": 4.75,
+                "50": 5.00,
+                "55": 5.25,
+                "60": 5.25,
+                "65": 5.50,
+                "70": 5.50,
+                "75": 5.75,
+                "80": 6.00,
+                "85": 6.25,
+                "90": 6.50,
+                "95": 6.75
+            },
+            "r3": {
+                "5": 3.00,
+                "10": 3.29,
+                "15": 3.57,
+                "20": 3.86,
+                "25": 4.00,
+                "30": 4.17,
+                "35": 4.43,
+                "40": 4.57,
+                "45": 4.71,
+                "50": 4.86,
+                "55": 5.00,
+                "60": 5.14,
+                "65": 5.29,
+                "70": 5.43,
+                "75": 5.57,
+                "80": 5.71,
+                "85": 5.86,
+                "90": 6.14,
+                "95": 6.43
+            },
+            "a1": {
+                "5": 2.90,
+                "10": 3.30,
+                "15": 3.50,
+                "20": 3.70,
+                "25": 3.90,
+                "30": 4.00,
+                "35": 4.10,
+                "40": 4.30,
+                "45": 4.40,
+                "50": 4.60,
+                "55": 4.70,
+                "60": 4.80,
+                "65": 5.00,
+                "70": 5.10,
+                "75": 5.30,
+                "80": 5.50,
+                "85": 5.70,
+                "90": 6.00,
+                "95": 6.30
+            },
+            "a2": {
+                "5": 3.14,
+                "10": 3.57,
+                "15": 3.71,
+                "20": 4.00,
+                "25": 4.14,
+                "30": 4.29,
+                "35": 4.43,
+                "40": 4.57,
+                "45": 4.71,
+                "50": 4.86,
+                "55": 5.00,
+                "60": 5.14,
+                "65": 5.29,
+                "70": 5.43,
+                "75": 5.57,
+                "80": 5.71,
+                "85": 6.00,
+                "90": 6.14,
+                "95": 6.43
+            },
+            "a3": {
+                "5": 2.83,
+                "10": 3.33,
+                "15": 3.50,
+                "20": 3.75,
+                "25": 4.00,
+                "30": 4.00,
+                "35": 4.23,
+                "40": 4.33,
+                "45": 4.50,
+                "50": 4.67,
+                "55": 4.83,
+                "60": 5.00,
+                "65": 5.00,
+                "70": 5.17,
+                "75": 5.33,
+                "80": 5.50,
+                "85": 5.67,
+                "90": 6.00,
+                "95": 6.17
+            }
+        }
+    },
+    "definitionReference": {
+        "factors": {
+            "n": {
+                "Muito Baixo": "", 
+                "Baixo": "", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos níveis de Neuroticismo tendem a vivenciar de forma mais intensa sofrimento psicológico, instabilidade emocional e vulnerabilidade, além de relatarem ter experiências intensas de eventos negativos, dando pouca ênfase aos aspectos positivos dos fatos. Altos níveis estão associados à ocorrência de sintomas de depressão e ansiedade, e pesquisas têm indicado a utilidade dos instrumentos para avaliação desse fator para a identificação de indivíduos com maior propensão a desenvolver esses quadros (Nunes, 2000; Nunes et al., 2001; Bienvenu et al., 2004).<br>Watson e Hubbard (1996) concluíram que o Neuroticismo também desempenha um papel importante no processo de coping. Argumentam que vários estudos mostraram que os escores de Neuroticismo têm valor preditivo em relação à ocorrência de eventos de vida estressantes, mesmo quando esses eventos são objetivamente definidos. Resumindo, os autores afirmaram que \"coisas ruins tendem a acontecer justamente com as pessoas que têm escores elevados de Neuroticismo\" (p. 748). Uma possível explicação para isso é que, de alguma forma, pessoas com altos escores nesse fator criam ativamente problemas para elas mesmas. Eles indicaram ainda que indivíduos com altos escores em Neuroticismo tendem a fazer avaliações negativistas do ambiente, ou seja, tendem a interpretar estímulos ambíguos de uma forma negativa ou ameaçadora e, por isso, normalmente veem ameaças, problemas e crises onde não existem objetivamente.", 
+                "Muito Alto": "Pessoas com altos níveis de Neuroticismo tendem a vivenciar de forma mais intensa sofrimento psicológico, instabilidade emocional e vulnerabilidade, além de relatarem ter experiências intensas de eventos negativos, dando pouca ênfase aos aspectos positivos dos fatos. Altos níveis estão associados à ocorrência de sintomas de depressão e ansiedade, e pesquisas têm indicado a utilidade dos instrumentos para avaliação desse fator para a identificação de indivíduos com maior propensão a desenvolver esses quadros (Nunes, 2000; Nunes et al., 2001; Bienvenu et al., 2004).\n \n Watson e Hubbard (1996) concluíram que o Neuroticismo também desempenha um papel importante no processo de coping. Argumentam que vários estudos mostraram que os escores de Neuroticismo têm valor preditivo em relação à ocorrência de eventos de vida estressantes, mesmo quando esses eventos são objetivamente definidos. Resumindo, os autores afirmaram que \"coisas ruins tendem a acontecer justamente com as pessoas que têm escores elevados de Neuroticismo\" (p. 748). Uma possível explicação para isso é que, de alguma forma, pessoas com altos escores nesse fator criam ativamente problemas para elas mesmas. Eles indicaram ainda que indivíduos com altos escores em Neuroticismo tendem a fazer avaliações negativistas do ambiente, ou seja, tendem a interpretar estímulos ambíguos de uma forma negativa ou ameaçadora e, por isso, normalmente veem ameaças, problemas e crises onde não existem objetivamente."
+            },
+            "e": {
+                "Muito Baixo": "Pessoas com níveis baixos em Extroversão tendem a ser caladas e reservadas. Geralmente, falam pouco sobre si e necessitam de um contato frequente e prolongado para desenvolver um senso de intimidade com os demais.", 
+                "Baixo": "Pessoas com níveis baixos em Extroversão tendem a ser caladas e reservadas. Geralmente, falam pouco sobre si e necessitam de um contato frequente e prolongado para desenvolver um senso de intimidade com os demais.", 
+                "Médio": "", 
+                "Alto": "Indivíduos que apresentam altos níveis de Extroversão tendem a ser falantes e buscam contato com pessoas, mesmo que as conheçam pouco. Tendem a ter um senso de intimidade maior que os demais, contando fatos íntimos e confiando em pessoas que conhecem relativamente pouco. Além disso, geralmente são pessoas ativas e externalizam suas preferências e crenças para as demais, podendo apresentar certa dominância.", 
+                "Muito Alto": "Indivíduos que apresentam altos níveis de Extroversão tendem a ser falantes e buscam contato com pessoas, mesmo que as conheçam pouco. Tendem a ter um senso de intimidade maior que os demais, contando fatos íntimos e confiando em pessoas que conhecem relativamente pouco. Além disso, geralmente são pessoas ativas e externalizam suas preferências e crenças para as demais, podendo apresentar certa dominância.<br> Pessoas com altos níveis de Extroversão tendem a ser amigáveis e socialmente ousadas, falantes, afetuosas, festeiras, a ter muitos amigos, a procurar ativamente contatos sociais, a ser assertivas e dominantes, enérgicas, ativas, vigorosas, a procurar estímulos fortes, a se envolver em riscos, a ser otimistas e divertidas."
+            },
+            "s": {
+                "Muito Baixo": "Pessoas baixas em Socialização tendem a ser hostis com os demais, incluindo uma postura manipuladora, cujo objetivo é o seu próprio benefício. Tendem a desconfiar dos demais, o que pode ser evidenciado também na área sentimental, a partir de relatos frequentes de episódios e comportamentos motivados por ciúme extremo. Em decorrência disso, pessoas com escores baixos em Socialização geralmente relatam ter poucos amigos ou pessoas significativas. Conforme já foi mencionado, pessoas baixas em Socialização podem apresentar padrões mais elevados de consumo de substâncias psicoativas, bem como quebra de leis e regras sociais, infidelidade recorrente e outros comportamentos associados ao transtorno Antissocial.", 
+                "Baixo": "Pessoas baixas em Socialização tendem a ser hostis com os demais, incluindo uma postura manipuladora, cujo objetivo é o seu próprio benefício. Tendem a desconfiar dos demais, o que pode ser evidenciado também na área sentimental, a partir de relatos frequentes de episódios e comportamentos motivados por ciúme extremo. Em decorrência disso, pessoas com escores baixos em Socialização geralmente relatam ter poucos amigos ou pessoas significativas.", 
+                "Médio": "", 
+                "Alto": "Pessoas altas em Socialização tendem a confiar nos demais, acreditando no seu lado positivo e raramente suspeitando das suas intenções. Essas pessoas tendem a ser leais com as demais e têm como característica marcante a franqueza. Apresentam preocupação e desejo de ajudar os demais, tendo um alto nível de altruísmo. Tendem a ser submissas e atendem mais facilmente às necessidades dos outros que lutam ativamente pelos seus interesses.", 
+                "Muito Alto": "Pessoas altas em Socialização tendem a confiar nos demais, acreditando no seu lado positivo e raramente suspeitando das suas intenções. Essas pessoas tendem a ser leais com as demais e têm como característica marcante a franqueza. Apresentam preocupação e desejo de ajudar os demais, tendo um alto nível de altruísmo. Tendem a ser submissas e atendem mais facilmente às necessidades dos outros que lutam ativamente pelos seus interesses."
+            },
+            "r": {
+                "Muito Baixo": "Indivíduos com níveis baixos de Realização, tendem a ter pouca motivação para lidar com tarefas complexas, desistindo diante de dificuldades. Tendem a ter um interesse muito difuso em relação ao planejamento geral de suas vidas e a se envolver em atividades sem uma noção clara de como estas as levarão aos seus objetivos. Além disso, usualmente são descomprometidos e pouco pontuais; têm dificuldade para se manter envolvidos em tarefas, mesmo que isso gere prejuízos para eles e para outras pessoas.", 
+                "Baixo": "Indivíduos com níveis baixos de Realização, tendem a ter pouca motivação para lidar com tarefas complexas, desistindo diante de dificuldades. Tendem a ter um interesse muito difuso em relação ao planejamento geral de suas vidas e a se envolver em atividades sem uma noção clara de como estas as levarão aos seus objetivos. Além disso, usualmente são descomprometidos e pouco pontuais; têm dificuldade para se manter envolvidos em tarefas, mesmo que isso gere prejuízos para eles e para outras pessoas.", 
+                "Médio": "", 
+                "Alto": "Pessoas que apresentam altos níveis em Realização tendem a buscar formas de alcançar seus objetivos, mesmo que isso envolva algum sacrifício ou conflite com algum desejo imediato. Tendem a ser ambiciosas, esforçadas e muito dedicadas ao trabalho.", 
+                "Muito Alto": "Pessoas que apresentam altos níveis em Realização tendem a buscar formas de alcançar seus objetivos, mesmo que isso envolva algum sacrifício ou conflite com algum desejo imediato. Tendem a ser ambiciosas, esforçadas e muito dedicadas ao trabalho."
+            },
+            "a": {
+                "Muito Baixo": "Pessoas baixas nessa dimensão tendem a ser convencionais nas suas crenças e atitudes, conservadoras nas suas preferências, dogmáticas e rígidas. Além disso, tendem a ser menos responsivas emocionalmente.", 
+                "Baixo": "Pessoas baixas nessa dimensão tendem a ser convencionais nas suas crenças e atitudes, conservadoras nas suas preferências, dogmáticas e rígidas. Além disso, tendem a ser menos responsivas emocionalmente.", 
+                "Médio": "", 
+                "Alto": "Indivíduos com altos níveis nessa dimensão são curiosos, imaginativos, criativos, divertem-se com novas ideias e com valores não convencionais. Experienciam uma gama ampla de emoções mais vividamente do que pessoas fechadas (baixas em Abertura).", 
+                "Muito Alto": "Indivíduos com altos níveis nessa dimensão são curiosos, imaginativos, criativos, divertem-se com novas ideias e com valores não convencionais. Experienciam uma gama ampla de emoções mais vividamente do que pessoas fechadas (baixas em Abertura)."
+            }
+        },
+        "facets": {
+            "n1": {
+                "Muito Baixo": "Escores muito baixos em Vulnerabilidade também podem indicar má adaptação. Indivíduos com esse perfil podem ser caracterizados por uma grande independência emocional em relação às outras pessoas, chegando à frieza e à falta de sensibilidade para com os outros. Podem ser excessivamente individualistas e nem um pouco preocupados com as opiniões alheias, indicando um padrão de relacionamentos sociais distorcido.", 
+                "Baixo": "", 
+                "Médio": "", 
+                "Alto": "", 
+                "Muito Alto": "Pessoas que apresentam um escore muito alto nesse fator tendem a apresentar baixa autoestima e relatam ter grande medo de que seus amigos as deixem em decorrência de seus erros. Usualmente, são capazes de ter atitudes contra a sua vontade, com o objetivo de agradar os outros. Também relatam ser inseguras, muito dependentes das pessoas próximas, e ter dificuldades em tomar decisões."
+            },
+            "n2": {
+                "Muito Baixo": "Pessoas com baixos resultados em Instabilidade emocional tendem a apresentar menor ocorrência de sentimentos negativistas e uma avaliação mais favorável sobre a qualidade de suas vidas. Tendem também a apresentar maior constância de humor, capacidade para lidar com sentimentos negativistas e controle de impulsos.", 
+                "Baixo": "Pessoas com baixos resultados em Instabilidade emocional tendem a apresentar menor ocorrência de sentimentos negativistas e uma avaliação mais favorável sobre a qualidade de suas vidas. Tendem também a apresentar maior constância de humor, capacidade para lidar com sentimentos negativistas e controle de impulsos.", 
+                "Médio": "", 
+                "Alto": "Indivíduos com altos escores nessa faceta indicam que tendem a agir impulsivamente quando sentem algum desconforto psicológico, tomando decisões precipitadas com relativa frequência. Tendem a apresentar grandes oscilações de humor sem um motivo aparente e têm dificuldade para controlar seus sentimentos negativos, além de possuírem baixa tolerância à frustração.", 
+                "Muito Alto": "Indivíduos com altos escores nessa faceta indicam que tendem a agir impulsivamente quando sentem algum desconforto psicológico, tomando decisões precipitadas com relativa frequência. Tendem a apresentar grandes oscilações de humor sem um motivo aparente e têm dificuldade para controlar seus sentimentos negativos, além de possuírem baixa tolerância à frustração."
+            },
+            "n3": {
+                "Muito Baixo": "scores baixos em N3 indicam pessoas mais proativas, que iniciam e concluem tarefas importantes e que se empenham para tomar decisões. Devem apresentar motivação interna para realizar seus planos, sem precisar de estímulos ou auxílio externo para tanto.", 
+                "Baixo": "scores baixos em N3 indicam pessoas mais proativas, que iniciam e concluem tarefas importantes e que se empenham para tomar decisões. Devem apresentar motivação interna para realizar seus planos, sem precisar de estímulos ou auxílio externo para tanto.", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos escores nesta faceta tendem a apresentar um comportamento de procrastinação, com grande dificuldade para iniciar tarefas, mesmo que simples. Têm também dificuldade para manter a motivação em afazeres longos ou difíceis, tendendo a abandoná-los antes de sua conclusão. Pessoas com esse perfil necessitam de estímulo de outros para conseguirem levar adiante seus planos e, com frequência, abstêm-se de tomar decisões sobre assuntos de seu interesse.", 
+                "Muito Alto": "Pessoas com altos escores nesta faceta tendem a apresentar um comportamento de procrastinação, com grande dificuldade para iniciar tarefas, mesmo que simples. Têm também dificuldade para manter a motivação em afazeres longos ou difíceis, tendendo a abandoná-los antes de sua conclusão. Pessoas com esse perfil necessitam de estímulo de outros para conseguirem levar adiante seus planos e, com frequência, abstêm-se de tomar decisões sobre assuntos de seu interesse."
+            },
+            "n4": {
+                "Muito Baixo": "Quem apresenta escores baixos em Depressão pode ter dificuldade para reconhecer problemas e avaliar eventos negativos em sua vida, minimizando-os. Tendem a apresentar uma expectativa positiva em relação ao seu futuro, acreditando em sua capacidade para lidar com as eventuais dificuldades que possam ocorrer. Em níveis extremos, tal característica pode indicar uma dificuldade para perceber quando estão diante de problemas reais, e isso pode prejudicá-los, em decorrência de uma falta de atitudes que possam resolver efetivamente os problemas que precisam ser enfrentados.", 
+                "Baixo": "Quem apresenta escores baixos em Depressão pode ter dificuldade para reconhecer problemas e avaliar eventos negativos em sua vida, minimizando-os. Tendem a apresentar uma expectativa positiva em relação ao seu futuro, acreditando em sua capacidade para lidar com as eventuais dificuldades que possam ocorrer. Em níveis extremos, tal característica pode indicar uma dificuldade para perceber quando estão diante de problemas reais, e isso pode prejudicá-los, em decorrência de uma falta de atitudes que possam resolver efetivamente os problemas que precisam ser enfrentados", 
+                "Médio": "", 
+                "Alto": "Aqueles com escores altos nessa faceta tendem a relatar expectativa negativa em relação ao seu futuro e indicam ter uma vida monótona e sem emoção. Além disso, tendem a se sentir solitários, sem objetivos claros para suas vidas, consideram-se incapazes de lidar com as dificuldades do cotidiano e tipicamente apresentam alto nível de desesperança.", 
+                "Muito Alto": "Aqueles com escores altos nessa faceta tendem a relatar expectativa negativa em relação ao seu futuro e indicam ter uma vida monótona e sem emoção. Além disso, tendem a se sentir solitários, sem objetivos claros para suas vidas, consideram-se incapazes de lidar com as dificuldades do cotidiano e tipicamente apresentam alto nível de desesperança."
+            },
+            "e1": {
+                "Muito Baixo": "Níveis baixos no subfator Comunicação sugerem pessoas que preferem não se expressar em público, que podem se constranger em situações de maior exposição e que falam pouco sobre si mesmas.", 
+                "Baixo": "Níveis baixos no subfator Comunicação sugerem pessoas que preferem não se expressar em público, que podem se constranger em situações de maior exposição e que falam pouco sobre si mesmas.", 
+                "Médio": "", 
+                "Alto": "Pessoas com escores altos nessa escala usualmente apresentam facilidade para falar em público e para conhecer novas pessoas. Tendem a falar mais sobre si mesmas, a iniciar conversas com os outros, a expressar suas opiniões e interesses quando estão em grupo. Além disso, indicam que dificilmente se sentem constrangidas em situações sociais.", 
+                "Muito Alto": "Pessoas com escores altos nessa escala usualmente apresentam facilidade para falar em público e para conhecer novas pessoas. Tendem a falar mais sobre si mesmas, a iniciar conversas com os outros, a expressar suas opiniões e interesses quando estão em grupo. Além disso, indicam que dificilmente se sentem constrangidas em situações sociais."
+            },
+            "e2": {
+                "Muito Baixo": "Pessoas com níveis baixos geralmente são mais humildes, não se vangloriam pelos bens e capacidades pessoais, e apresentam pouca necessidade de receber atenção das pessoas. Podem inclusive ter dificuldade para reconhecer as suas capacidades e atributos favoráveis, mesmo que sejam evidentes.", 
+                "Baixo": "Pessoas com níveis baixos geralmente são mais humildes, não se vangloriam pelos bens e capacidades pessoais, e apresentam pouca necessidade de receber atenção das pessoas. Podem inclusive ter dificuldade para reconhecer as suas capacidades e atributos favoráveis, mesmo que sejam evidentes.", 
+                "Médio": "", 
+                "Alto": "Indivíduos com escores altos nessa escala relatam a necessidade de receber atenção das pessoas, a crença de que os demais os invejam e apresentam uma predisposição para falar sobre si.", 
+                "Muito Alto": "Indivíduos com escores altos nessa escala relatam a necessidade de receber atenção das pessoas, a crença de que os demais os invejam e apresentam uma predisposição para falar sobre si."
+            },
+            "e3": {
+                "Muito Baixo": "Pessoas com escores baixos em E3 tendem a se concentrar em uma única atividade por vez e não precisam estar sempre em movimento ou em atividade para se sentirem bem. Além disso, podem demorar mais para colocar suas ideias em prática e tomar iniciativa para realizar certas ações.", 
+                "Baixo": "Pessoas com escores baixos em E3 tendem a se concentrar em uma única atividade por vez e não precisam estar sempre em movimento ou em atividade para se sentirem bem. Além disso, podem demorar mais para colocar suas ideias em prática e tomar iniciativa para realizar certas ações.", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos escores nessa escala usualmente são mais dinâmicas, envolvem-se em várias atividades simultaneamente e preferem, mesmo quando estão em folga ou férias, manter-se ocupadas com atividades variadas.", 
+                "Muito Alto": "Pessoas com altos escores nessa escala usualmente são mais dinâmicas, envolvem-se em várias atividades simultaneamente e preferem, mesmo quando estão em folga ou férias, manter-se ocupadas com atividades variadas."
+            },
+            "e4": {
+                "Muito Baixo": "Escores baixos tendem a estar presentes em pessoas que preferem ficar sozinhas ou em grupos pequenos, e que tendem a demorar mais para desenvolver novas relações sociais. Pessoas com níveis baixos tendem a apresentar uma necessidade reduzida de viver situações mais intensas, de frequentar lugares mais ricos em termos de estímulos e possibilidades de contatos sociais.", 
+                "Baixo": "Escores baixos tendem a estar presentes em pessoas que preferem ficar sozinhas ou em grupos pequenos, e que tendem a demorar mais para desenvolver novas relações sociais. Pessoas com níveis baixos tendem a apresentar uma necessidade reduzida de viver situações mais intensas, de frequentar lugares mais ricos em termos de estímulos e possibilidades de contatos sociais.", 
+                "Médio": "", 
+                "Alto": "Indivíduos com altos escores nessa escala tendem a ser gregários e se esforçam para manter contato com seus conhecidos. Relatam preferir atividades em grupo e se envolvem rapidamente com as pessoas.", 
+                "Muito Alto": "Indivíduos com altos escores nessa escala tendem a ser gregários e se esforçam para manter contato com seus conhecidos. Relatam preferir atividades em grupo e se envolvem rapidamente com as pessoas."
+            },
+            "s1": {
+                "Muito Baixo": "Pessoas baixas em Amabilidade tendem a apresentar pouca disponibilidade para com as demais, sendo autocentradas e indiferentes para com as necessidades alheias. Apresentam pouca preocupação em promover o bem-estar dos outros, podendo se dirigir a eles de forma pouco cuidadosa, tratando de assuntos delicados de forma insensível, chegando a ser hostis.", 
+                "Baixo": "Pessoas baixas em Amabilidade tendem a apresentar pouca disponibilidade para com as demais, sendo autocentradas e indiferentes para com as necessidades alheias. Apresentam pouca preocupação em promover o bem-estar dos outros, podendo se dirigir a eles de forma pouco cuidadosa, tratando de assuntos delicados de forma insensível, chegando a ser hostis.", 
+                "Médio": "", 
+                "Alto": "Pessoas altas em Amabilidade tendem a ser atenciosas e amáveis com as demais, demonstrando sua preocupação com as necessidades alheias. Tendem a ser proativas para resolver os problemas das pessoas, bem como expor o seu apreço por elas. Indivíduos altos nesse fator apresentam uma preocupação em tratar bem as demais pessoas, perguntando como estão e se esforçando para que se sintam bem.", 
+                "Muito Alto": "Pessoas altas em Amabilidade tendem a ser atenciosas e amáveis com as demais, demonstrando sua preocupação com as necessidades alheias. Tendem a ser proativas para resolver os problemas das pessoas, bem como expor o seu apreço por elas. Indivíduos altos nesse fator apresentam uma preocupação em tratar bem as demais pessoas, perguntando como estão e se esforçando para que se sintam bem."
+            },
+            "s2": {
+                "Muito Baixo": "Indivíduos com baixos escores tendem a se envolver em situações que podem colocá-los, ou as demais pessoas, em perigo. Apresentam pouca preocupação em seguir regras, podendo apresentar uma visão que minimiza, ignora ou desqualifica a sua importância. Podem ser manipuladores, agindo ativamente para que as demais pessoas façam o que eles desejam. Podem apresentar um padrão hostil de interação com os demais, tratando-os de forma desrespeitosa ou opositora.", 
+                "Baixo": "Indivíduos com baixos escores tendem a se envolver em situações que podem colocá-los, ou as demais pessoas, em perigo. Apresentam pouca preocupação em seguir regras, podendo apresentar uma visão que minimiza, ignora ou desqualifica a sua importância. Podem ser manipuladores, agindo ativamente para que as demais pessoas façam o que eles desejam. Podem apresentar um padrão hostil de interação com os demais, tratando-os de forma desrespeitosa ou opositora.", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos resultados em Pró-sociabilidade tendem a evitar situações de risco, bem como transgressões a leis ou regras sociais. Tendem a apresentar uma postura franca com os demais, evitando pressioná-los ou induzi-los a fazerem algo que não queiram.", 
+                "Muito Alto": "Pessoas com altos resultados em Pró-sociabilidade tendem a evitar situações de risco, bem como transgressões a leis ou regras sociais. Tendem a apresentar uma postura franca com os demais, evitando pressioná-los ou induzi-los a fazerem algo que não queiram."
+            },
+            "s3": {
+                "Muito Baixo": "Pessoas com escores muito baixos nessa escala frequentemente relatam a constante percepção de que as pessoas podem estar tentando prejudicá-las em variados contextos. Tendem a ser muito ciumentas nas suas relações amorosas e têm grande dificuldade de desenvolver intimidade com os outros.", 
+                "Baixo": "Casos com baixos escores tendem a ser céticos e assumem que os outros podem ser desonestos ou perigosos.", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos escores em Confiança tendem a acreditar que os outros são honestos e bem intencionados.", 
+                "Muito Alto": "Pessoas com escores muito altos em Confiança podem apresentar uma postura ingênua com os demais, chegando a se colocar em situações nas quais facilmente podem ser prejudicadas ou enganadas por indivíduos mal intencionados."
+            },
+            "r1": {
+                "Muito Baixo": "Escores baixos sugerem pouca disposição para atingir objetivos; pessoas com esse perfil facilmente desistem diante de obstáculos ou da necessidade de fazer sacrifícios. Além disso, escores baixos tendem a estar presentes em pessoas com uma percepção desfavorável sobre sua capacidade, que evitam atividades complexas e desafiantes e que não possuem objetivos bem definidos.", 
+                "Baixo": "Escores baixos sugerem pouca disposição para atingir objetivos; pessoas com esse perfil facilmente desistem diante de obstáculos ou da necessidade de fazer sacrifícios.", 
+                "Médio": "", 
+                "Alto": "Escores altos referem-se a pessoas que tendem a acreditar no seu potencial para realizar várias tarefas ao mesmo tempo, a gostar de atividades complexas e desafiantes e a possuir clareza sobre quais objetivos de vida possui.", 
+                "Muito Alto": "Escores altos referem-se a pessoas que tendem a acreditar no seu potencial para realizar várias tarefas ao mesmo tempo, a gostar de atividades complexas e desafiantes e a possuir clareza sobre quais objetivos de vida possui."
+            },
+            "r2": {
+                "Muito Baixo": "Pessoas com escores baixos tendem a falar sem pensar antes, a agir antes de fazer algum planejamento e a ser impulsivas, de modo geral.", 
+                "Baixo": "Pessoas com escores baixos tendem a falar sem pensar antes, a agir antes de fazer algum planejamento e a ser impulsivas, de modo geral.", 
+                "Médio": "", 
+                "Alto": "Pessoas que se identificam com esses itens tendem a ser mais ponderadas quanto ao que dizem e fazem, tentando controlar sua impulsividade ao resolver problemas.", 
+                "Muito Alto": "Pessoas que se identificam com esses itens tendem a ser mais ponderadas quanto ao que dizem e fazem, tentando controlar sua impulsividade ao resolver problemas."
+            },
+            "r3": {
+                "Muito Baixo": "Escores baixos tendem a ser verificados em pessoas que não costumam se dedicar a atividades acadêmicas e profissionais e que são mais descuidadas com a forma de realização e conclusão de tarefas. Pessoas com níveis baixos de Empenho tendem a colocar pouca energia nas tarefas em que se envolvem e podem, com alguma frequência, fazê-las de tal forma que a qualidade de seu trabalho seja insuficiente ou, ainda, podem não completá-las.", 
+                "Baixo": "Escores baixos tendem a ser verificados em pessoas que não costumam se dedicar a atividades acadêmicas e profissionais e que são mais descuidadas com a forma de realização e conclusão de tarefas.", 
+                "Médio": "", 
+                "Alto": "Pessoas que se identificam com esses itens tendem a se dedicar bastante às atividades profissionais/acadêmicas, gostam de obter reconhecimento por seu esforço e podem ser perfeccionistas.<b>Também descrevem uma tendência a querer planejar detalhadamente os passos para a realização de alguma tarefa e sentem a necessidade de realizar revisões cuidadosas dos trabalhos antes de expô-los a terceiros.", 
+                "Muito Alto": "Pessoas que se identificam com esses itens tendem a se dedicar bastante às atividades profissionais/acadêmicas, gostam de obter reconhecimento por seu esforço e podem ser perfeccionistas.<br>Também descrevem uma tendência a querer planejar detalhadamente os passos para a realização de alguma tarefa e sentem a necessidade de realizar revisões cuidadosas dos trabalhos antes de expô-los a terceiros."
+            },
+            "a1": {
+                "Muito Baixo": "Pessoas com baixos escores são pouco curiosas para conhecer novos temas, são mais conservadoras e fiéis a seus gostos artísticos e possuem postura rígida quanto a conceitos.", 
+                "Baixo": "Pessoas com baixos escores são pouco curiosas para conhecer novos temas, são mais conservadoras e fiéis a seus gostos artísticos e possuem postura rígida quanto a conceitos.", 
+                "Médio": "", 
+                "Alto": "Pessoas com altos níveis em Abertura a ideias gostam de participar de atividades que exijam imaginação ou fantasia, têm interesse por ideias abstratas, discussões filosóficas e arte. Além disso, têm curiosidade sobre novas tendências musicais e por áreas afins.", 
+                "Muito Alto": "Pessoas com altos níveis em Abertura a ideias gostam de participar de atividades que exijam imaginação ou fantasia, têm interesse por ideias abstratas, discussões filosóficas e arte. Além disso, têm curiosidade sobre novas tendências musicais e por áreas afins."
+            },
+            "a2": {
+                "Muito Baixo": "Escores baixos envolvem pouco interesse por questões referentes à relativização de valores e conceitos sociais, dogmatismo e entendimento de que os valores adotados não devem ser mudados com o passar do tempo.", 
+                "Baixo": "Escores baixos envolvem pouco interesse por questões referentes à relativização de valores e conceitos sociais, dogmatismo e entendimento de que os valores adotados não devem ser mudados com o passar do tempo.", 
+                "Médio": "", 
+                "Alto": "Pessoas que se identificam com esses itens tendem a relativizar valores morais e regras sociais, tendo consciência de que estes evoluem ao longo do tempo e que podem ser diferentes a depender da cultura local em questão.", 
+                "Muito Alto": "Pessoas que se identificam com esses itens tendem a relativizar valores morais e regras sociais, tendo consciência de que estes evoluem ao longo do tempo e que podem ser diferentes a depender da cultura local em questão. Os itens indicam a consciência de que os aspectos tidos como \"verdades\" tendem a mudar ao longo do tempo, do mesmo modo que as regras e os costumes sociais."
+            },
+            "a3": {
+                "Muito Baixo": "Pessoas com níveis baixos de A3 relatam se sentir desconfortáveis com a quebra de rotina, bem como pouco interesse para fazer coisas que nunca fizeram antes e conhecer lugares e objetos novos.", 
+                "Baixo": "Pessoas com níveis baixos de A3 relatam se sentir desconfortáveis com a quebra de rotina, bem como pouco interesse para fazer coisas que nunca fizeram antes e conhecer lugares e objetos novos.", 
+                "Médio": "", 
+                "Alto": "Pessoas que apresentam altos níveis nessa faceta relatam não gostar de rotinas em contextos variados; têm pouca motivação para realizar tarefas repetitivas e ficam facilmente entediados quando não podem vivenciar eventos novos.", 
+                "Muito Alto": "Pessoas que apresentam altos níveis nessa faceta relatam não gostar de rotinas em contextos variados; têm pouca motivação para realizar tarefas repetitivas e ficam facilmente entediados quando não podem vivenciar eventos novos. "
+            }
+        }
+    },
+    "seemReference": {
+        "test": 3,
+        "factors": {
+            "n": 2,
+            "e": 2,
+            "s": 2,
+            "r": 2,
+            "a": 2
+        },
+        "facets": {
+            "n1": {
+                "operation": "between",
+                "value": {
+                    "1": 15,
+                    "2": 50
+                }
+            },
+            "n2": {
+                "operation": "less",
+                "value": {
+                    "1": 50
+                }
+            },
+            "n3": {
+                "operation": "less",
+                "value": {
+                    "1": 50
+                }
+            },
+            "n4": {
+                "operation": "between",
+                "value": {
+                    "1": 15,
+                    "2": 50
+                }
+            },
+            "e1": {
+                "operation": "greater",
+                "value": {
+                    "1": 30
+                }
+            },
+            "e2": {
+                "operation": "between",
+                "value": {
+                    "1": 30,
+                    "2": 85
+                }
+            },
+            "e3": {
+                "operation": "greater",
+                "value": {
+                    "1": 30
+                }
+            },
+            "e4": {
+                "operation": "greater",
+                "value": {
+                    "1": 30
+                }
+            },
+            "s1": {
+                "operation": "greater",
+                "value": {
+                    "1": 30
+                }
+            },
+            "s2": {
+                "operation": "greater",
+                "value": {
+                    "1": 30
+                }
+            },
+            "s3": {
+                "operation": "between",
+                "value": {
+                    "1": 30,
+                    "2": 85
+                }
+            },
+            "r1": {
+                "operation": "greater",
+                "value": {
+                    "1": 50
+                }
+            },
+            "r2": {
+                "operation": "greater",
+                "value": {
+                    "1": 50
+                }
+            },
+            "r3": {
+                "operation": "greater",
+                "value": {
+                    "1": 50
+                }
+            },
+            "a1": {
+                "operation": "between",
+                "value": {
+                    "1": 15,
+                    "2": 85
+                }
+            },
+            "a2": {
+                "operation": "between",
+                "value": {
+                    "1": 15,
+                    "2": 85
+                }
+            },
+            "a3": {
+                "operation": "between",
+                "value": {
+                    "1": 15,
+                    "2": 85
+                }
+            }
+        }
+    },
+    "facetName": {
+        "n1": "N1",
+        "n2": "N2",
+        "n3": "N3",
+        "n4": "N4",
+        "e1": "E1",
+        "e2": "E2",
+        "e3": "E3",
+        "e4": "E4",
+        "s1": "S1",
+        "s2": "S2",
+        "s3": "S3",
+        "r1": "R1",
+        "r2": "R2",
+        "r3": "R3",
+        "a1": "A1",
+        "a2": "A2",
+        "a3": "A3"
+    },
+    "facetDescription": {
+        "n1": "VULNERABILIDADE",
+        "n2": "INSTABILIDADE EMOCIONAL",
+        "n3": "PASSIVIDADE",
+        "n4": "DEPRESSÃO",
+        "e1": "COMUNICAÇÃO",
+        "e2": "ALTIVEZ",
+        "e3": "DINAMISMO",
+        "e4": "INTERAÇÕES SOCIAIS",
+        "s1": "AMABILIDADE",
+        "s2": "PRÓSOCIABILIDADE",
+        "s3": "CONFIANÇA NAS PESSOAS",
+        "r1": "COMPETENCIA",
+        "r2": "PONDERAÇÃO",
+        "r3": "EMPENHO",
+        "a1": "ABERTURA DE IDEIAS",
+        "a2": "LIBERALISMO",
+        "a3": "BUSCA POR NOVIDADES"
+    },
+    "requiredQuestions": {
+        "n1": [ 55, 60, 73, 75, 79, 82, 89, 110, 118 ],
+        "n2": [ 25, 51, 65, 77, 86, 102 ],
+        "n3": [ 13, 22, 35, 37, 95, 100 ],
+        "n4": [ 16, 29, 40, 48, 70, 106, 121, 124 ],
+        "e1": [ 17, 38, 66, 97, 105, 120 ],
+        "e2": [ 3, 5, 14, 78, 93, 99, 111 ],
+        "e3": [ 21, 26, 32, 108, 117 ],
+        "e4": [ 8, 11, 47, 50, 52, 71, 90 ],
+        "s1": [ 2, 4, 12, 15, 20, 43, 46, 61, 92, 96, 104, 125 ],
+        "s2": [ 18, 24, 27, 63, 76, 87, 107, 109 ],
+        "s3": [ 7, 10, 30, 39, 57, 68, 98, 119 ],
+        "r1": [ 28, 41, 58, 64, 67, 72, 83, 85, 91, 122 ],
+        "r2": [ 9, 19, 45, 101 ],
+        "r3": [ 34, 54, 80, 103, 112, 114, 116 ],
+        "a1": [ 23, 33, 36, 42, 53, 56, 62, 81, 88, 115 ],
+        "a2": [ 1, 31, 59, 69, 74, 123, 126 ],
+        "a3": [ 6, 44, 49, 84, 94, 113 ]
+    }
+}
