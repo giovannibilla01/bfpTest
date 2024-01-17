@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" href=".\css\style.css">
-    <title>Bateria Fatorial de Personalidade</title>
+    <title>Teste de Personalidade</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -21,7 +21,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <h1>Bateria Fatorial de Personalidade</h1>
+          <h1>Teste de Personalidade</h1>
         </div>
       </div>
       <?php
@@ -135,7 +135,7 @@
         $rules['seemReference']['factors']['e']
       );
       $factors['s'] = new Factor(
-        "SOCIALIZAÇÃO",
+        "AGRADABILIDADE",
         [
           new Facet($rules['facetName']['s1'], $rules['facetDescription']['s1'], $questionsArray, $rules['requiredQuestions']['s1'], $rules['percentileValues']['facets']['s1'], $rules['classificationReference'], $rules['definitionReference']['facets']['s1'], $rules['seemReference']['facets']['s1']),
           new Facet($rules['facetName']['s2'], $rules['facetDescription']['s2'], $questionsArray, $rules['requiredQuestions']['s2'], $rules['percentileValues']['facets']['s2'], $rules['classificationReference'], $rules['definitionReference']['facets']['s2'], $rules['seemReference']['facets']['s2']),
@@ -147,7 +147,7 @@
         $rules['seemReference']['factors']['s']
       );
       $factors['r'] = new Factor(
-        "REALIZAÇÃO",
+        "CONSCIENCIOSIDADE",
         [
           new Facet($rules['facetName']['r1'], $rules['facetDescription']['r1'], $questionsArray, $rules['requiredQuestions']['r1'], $rules['percentileValues']['facets']['r1'], $rules['classificationReference'], $rules['definitionReference']['facets']['r1'], $rules['seemReference']['facets']['r1']),
           new Facet($rules['facetName']['r2'], $rules['facetDescription']['r2'], $questionsArray, $rules['requiredQuestions']['r2'], $rules['percentileValues']['facets']['r2'], $rules['classificationReference'], $rules['definitionReference']['facets']['r2'], $rules['seemReference']['facets']['r2']),
@@ -159,7 +159,7 @@
         $rules['seemReference']['factors']['r']
       );
       $factors['a'] = new Factor(
-        "ABERTURA",
+        "ABERTURA À EXPERIÊNCIA",
         [
           new Facet($rules['facetName']['a1'], $rules['facetDescription']['a1'], $questionsArray, $rules['requiredQuestions']['a1'], $rules['percentileValues']['facets']['a1'], $rules['classificationReference'], $rules['definitionReference']['facets']['a1'], $rules['seemReference']['facets']['a1']),
           new Facet($rules['facetName']['a2'], $rules['facetDescription']['a2'], $questionsArray, $rules['requiredQuestions']['a2'], $rules['percentileValues']['facets']['a2'], $rules['classificationReference'], $rules['definitionReference']['facets']['a2'], $rules['seemReference']['facets']['a2']),
@@ -198,7 +198,7 @@
       </div>
       <div class="row">
         <div class="col text-center">
-          <h4>Aplicação : Com Parecer</h4>
+          <h4>Aplicação</h4>
         </div>
       </div>
       <?php 
@@ -214,7 +214,7 @@
                 <th scope="col">Escore Bruto</th>
                 <th scope="col">Percentil</th>
                 <th scope="col">Classificação</th>
-                <th scope="col">Parecer</th>
+                <th scope="col">&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -234,7 +234,7 @@
       ?>
       <div class="row">
         <div class="col text-center">
-          <h3>Parecer do Teste: <?php echo $test->GetSeem() ?></h3>
+          <h3>Teste: <?php echo $test->GetSeem() ?></h3>
         </div>
       </div>
       <div class="row">
